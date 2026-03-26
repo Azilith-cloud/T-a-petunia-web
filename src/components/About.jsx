@@ -86,7 +86,7 @@ export default function About() {
             </div>
 
             {/* Stats */}
-            <div className="reveal grid grid-cols-3 gap-6 mt-10" style={{ transitionDelay: '0.5s' }}>
+            <div className="reveal grid grid-cols-1 md:grid-cols-3 gap-8 mt-10" style={{ transitionDelay: '0.5s' }}>
               {[
                 { number: '15+', label: 'Años de tradición' },
                 { number: '3K+', label: 'Clientes felices' },

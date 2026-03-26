@@ -9,11 +9,13 @@ import About from './components/About'
 import Footer from './components/Footer'
 import PromocionesPage from './pages/PromocionesPage'
 import MenuPage from './pages/MenuPage'
+import QuickSelection from './components/QuickSelection'
 
 function HomePage() {
   return (
     <>
       <Hero />
+      <QuickSelection />
       <FlautaAnimation />
       <Promociones />
       <Menu />

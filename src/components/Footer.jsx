@@ -51,15 +51,19 @@ export default function Footer() {
               Horarios
             </h3>
             <div className="space-y-2 text-white/60 text-sm">
-              <p>Lunes a Viernes: <span className="text-orange-light font-medium">8:00 AM - 8:00 PM</span></p>
-              <p>Sábados: <span className="text-orange-light font-medium">8:00 AM - 9:00 PM</span></p>
-              <p>Domingos: <span className="text-orange-light font-medium">9:00 AM - 6:00 PM</span></p>
+              <p>Miércoles a Lunes: <span className="text-orange-light font-medium">9:00 AM - 4:00 PM</span></p>
+              <p>Martes: <span className="text-white/40 font-medium">Cerrado</span></p>
             </div>
             <div className="mt-6 p-4 bg-white/5 rounded-2xl border border-white/10">
               <p className="text-white/80 text-sm font-medium flex items-center justify-center gap-2">
                 <Phone size={14} /> Pedidos al teléfono
               </p>
-              <p className="text-orange-light text-xl font-bold mt-1">(555) 123-4567</p>
+              <a 
+                href="tel:3329387442" 
+                className="text-orange-light text-xl font-bold mt-1 block hover:text-white transition-colors duration-300"
+              >
+                33 2938 7442
+              </a>
             </div>
           </div>
 
@@ -68,12 +72,13 @@ export default function Footer() {
             <h3 className="text-white font-bold text-lg mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
               Encuéntranos
             </h3>
-            <p className="text-white/60 text-sm leading-relaxed flex items-start gap-2 justify-center md:justify-end">
+            <p className="text-white/60 text-sm leading-relaxed flex items-start gap-2 justify-center md:justify-end text-left sm:text-center md:text-right">
               <MapPin size={16} className="mt-0.5 shrink-0" />
               <span>
-                Calle Principal #123<br />
-                Colonia Centro<br />
-                Ciudad de México, CDMX
+                Ubicado en: <strong className="text-white/90">Plaza Velas María</strong><br />
+                H. Colegio Militar #4-A<br />
+                El Fortín, 45066<br />
+                Zapopan, Jal.
               </span>
             </p>
             <a
