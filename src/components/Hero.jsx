@@ -48,20 +48,19 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* Absolutely Positioned Mascot (Anchored to bottom-right of the CONTENT) */}
+        {/* Mascot (Stacked below text on Mobile, Absolute on Desktop) */}
         <div 
-          className="absolute bottom-0 right-0 z-10 animate-slide-up pointer-events-none flex justify-end"
-          style={{ animationDelay: '0.2s', width: 'auto' }}
+          className="w-full md:absolute md:bottom-0 md:right-0 z-10 animate-slide-up pointer-events-none flex justify-center md:justify-end mt-4 md:mt-0"
+          style={{ animationDelay: '0.2s' }}
         >
-          <div className="relative">
+          <div className="relative flex justify-center">
             {/* Soft pink glow behind mascot */}
             <div className="absolute inset-x-0 bottom-10 top-20 bg-gradient-to-t from-[#E91E8C]/20 to-transparent rounded-full blur-[60px] -z-10" />
             <img
               src="/assets/cerdita sin fondo hd.png?v=6"
               alt="Cerdita Tía Petunia"
-              className="w-[350px] sm:w-[480px] md:w-[600px] lg:w-[750px] xl:w-[850px] h-auto drop-shadow-[0_25px_45px_rgba(0,0,0,0.6)] hover:scale-105 transition-transform duration-700 pointer-events-auto"
+              className="w-full max-w-[320px] sm:max-w-[420px] md:max-w-none md:w-[600px] lg:w-[750px] xl:w-[850px] h-auto drop-shadow-[0_25px_45px_rgba(0,0,0,0.6)] hover:scale-105 transition-transform duration-700 pointer-events-auto md:-mr-12 lg:-mr-16"
               style={{ 
-                marginRight: '-5%', // Pull the pig slightly off-frame 
                 transformOrigin: 'bottom center',
                 display: 'block'
               }}
