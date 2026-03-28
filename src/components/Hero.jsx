@@ -43,8 +43,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-xl leading-relaxed mt-2 md:mt-4">
-            Gorditas, Flautas, Quesadillas y nuestra famosa{' '}
-            <span className="font-bold text-[#FFB84D]">Gordita de Chilaquiles</span>
+            Tías (Gorditas), Mamichulas (flautas en vaso), Quesadillas y nuestra famosa{' '}
+            <span className="font-bold text-[#FFB84D]">Tía Chilaquiles</span>
           </p>
         </div>
 

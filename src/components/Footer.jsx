@@ -23,7 +23,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
-              Gorditas, flautas, quesadillas y nuestra famosa gordita de chilaquiles.
+              Tías (gorditas), mamichulas (flautas en vaso), quesadillas y nuestra famosa Tía Chilaquiles.
               Sabor casero hecho con amor desde hace más de 15 años.
             </p>
             {/* Social */}

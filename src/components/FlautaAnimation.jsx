@@ -75,7 +75,7 @@ export default function FlautaAnimation() {
           <div className="text-center lg:text-left lg:max-w-md">
             <div key={activeText.title} className="animate-slide-up">
               <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-pink/10 text-pink rounded-full text-sm font-semibold mb-4">
-                <UtensilsCrossed size={13} /> Flautas Artesanales
+                <UtensilsCrossed size={13} /> Mamichulas Artesanales
               </span>
               <h2
                 className="text-3xl md:text-5xl font-bold gradient-text mb-4"

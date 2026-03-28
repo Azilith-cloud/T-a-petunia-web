@@ -50,7 +50,7 @@ export default function Especialidad() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="/assets/gordita-chilaquiles.png"
-                  alt="Gordita de Chilaquiles"
+                  alt="Tía Chilaquiles"
                   className="w-full h-80 md:h-[28rem] object-cover"
                 />
                 {/* Overlay gradient */}
@@ -85,7 +85,7 @@ export default function Especialidad() {
               className="reveal text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
               style={{ fontFamily: 'var(--font-heading)', transitionDelay: '0.1s' }}
             >
-              Gordita de{' '}
+              Tía{' '}
               <span className="text-orange-light">Chilaquiles</span>
             </h2>
 

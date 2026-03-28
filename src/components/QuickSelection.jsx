@@ -1,13 +1,76 @@
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const cards = [
-  { id: 'gorditas', label: 'Gorditas', image: '/assets/gorditas 2.jpeg' },
-  { id: 'flautas', label: 'Flautas', image: '/assets/aqui tenemos la comida lista.jpeg' },
+  { id: 'gorditas', label: 'Tías (Gorditas)', image: '/assets/gorditas 2.jpeg' },
+  { id: 'flautas', label: 'Mamichulas (flautas en vaso)', image: '/assets/aqui tenemos la comida lista.jpeg' },
   { id: 'quesadillas', label: 'Quesadillas', image: '/assets/quesadilla.jpeg' },
   { id: 'especialidades', label: 'Especialidades', image: '/assets/mami birrias.jpeg' },
+  { id: 'lonches', label: 'Lonches', image: '/assets/lonches.jpeg' },
+  { id: 'aguas', label: 'Aguas Frescas', image: '/assets/aguas/aguas frescas.jpeg' },
+  { id: 'combos', label: 'Combos Rápidos', image: '/assets/sin complicarte.jpeg' },
 ]
 
 export default function QuickSelection() {
+  const scrollRef = useRef(null)
+  const isDragging = useRef(false)
+  const startX = useRef(0)
+  const scrollLeftPos = useRef(0)
+  const [isHovered, setIsHovered] = useState(false)
+  const navigate = useNavigate()
+
+  const handleMouseDown = (e) => {
+    isDragging.current = true
+    startX.current = e.pageX - scrollRef.current.offsetLeft
+    scrollLeftPos.current = scrollRef.current.scrollLeft
+    scrollRef.current.style.scrollSnapType = 'none'
+    scrollRef.current.style.cursor = 'grabbing'
+  }
+
+  const handleMouseUpOrLeave = () => {
+    isDragging.current = false
+    setIsHovered(false)
+    if (scrollRef.current) {
+      scrollRef.current.style.scrollSnapType = 'x mandatory'
+      scrollRef.current.style.cursor = ''
+    }
+  }
+
+  const handleMouseMove = (e) => {
+    if (!isDragging.current) return
+    e.preventDefault()
+    setIsHovered(true)
+    const x = e.pageX - scrollRef.current.offsetLeft
+    const walk = (x - startX.current) * 1.5
+    scrollRef.current.scrollLeft = scrollLeftPos.current - walk
+  }
+
+  const handleCardClick = (e, path) => {
+    if (Math.abs(scrollRef.current.scrollLeft - scrollLeftPos.current) > 10) {
+      e.preventDefault()
+      e.stopPropagation()
+      return
+    }
+    navigate(path)
+  }
+
+  // Auto-play carousel
+  useEffect(() => {
+    if (isHovered) return
+    const interval = setInterval(() => {
+      if (scrollRef.current && scrollRef.current.children.length > 0) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current
+        const cardWidth = scrollRef.current.children[0].offsetWidth + 24 // + gap
+        if (scrollLeft + clientWidth >= scrollWidth - 10) {
+          scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' })
+        } else {
+          scrollRef.current.scrollBy({ left: cardWidth, behavior: 'smooth' })
+        }
+      }
+    }, 4500) // Cambiado a 4.5s para que se puedan leer las tarjetas
+    return () => clearInterval(interval)
+  }, [isHovered])
+
   return (
     <section 
       style={{ backgroundColor: '#094E5A' }} 
@@ -21,22 +84,36 @@ export default function QuickSelection() {
           >
             Selección Rápida
           </h2>
-          <div className="flex gap-3">
-            <button className="w-10 h-10 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-white/50 hover:bg-white/10 hover:text-white transition-all">
-              <ChevronLeft size={20} />
-            </button>
-            <button className="w-10 h-10 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-white/50 hover:bg-white/10 hover:text-white transition-all">
-              <ChevronRight size={20} />
-            </button>
-          </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div 
+          ref={scrollRef}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseDown={handleMouseDown}
+          onMouseLeave={handleMouseUpOrLeave}
+          onMouseUp={handleMouseUpOrLeave}
+          onMouseMove={handleMouseMove}
+          onTouchStart={() => setIsHovered(true)}
+          onTouchEnd={() => setIsHovered(false)}
+          className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 no-scrollbar -mx-6 md:-mx-12"
+          style={{ 
+            scrollbarWidth: 'none', 
+            msOverflowStyle: 'none',
+            WebkitOverflowScrolling: 'touch',
+            paddingLeft: 'max(24px, calc(50% - 640px))',
+            paddingRight: 'max(24px, calc(50% - 640px))',
+          }}
+        >
           {cards.map((card, i) => (
             <div 
               key={card.id} 
-              className="relative rounded-3xl overflow-hidden aspect-[4/3] sm:aspect-square md:aspect-[4/3] group cursor-pointer shadow-2xl transition-transform duration-500 hover:-translate-y-2"
-              style={{ animation: `slideUp 0.6s ease-out ${i * 0.15}s both` }}
+              onClick={(e) => handleCardClick(e, '/menu')}
+              className="relative rounded-3xl overflow-hidden group cursor-pointer shadow-2xl transition-transform duration-500 hover:-translate-y-2 shrink-0 snap-center"
+              style={{ 
+                animation: `slideUp 0.6s ease-out ${i * 0.15}s both`,
+                width: 'min(85vw, 300px)',
+                aspectRatio: '4/3',
+              }}
             >
               <img 
                 src={card.image} 
@@ -55,12 +132,28 @@ export default function QuickSelection() {
             </div>
           ))}
         </div>
+        
+        {/* Helper text for mobile */}
+        <div 
+          className="text-center mt-2 text-white/50 text-sm font-medium flex justify-center items-center gap-2 lg:hidden"
+          style={{ fontFamily: 'var(--font-body)' }}
+        >
+          <span>Desliza para explorar</span>
+          <span style={{ fontSize: '1.2rem', animation: 'bounceX 1.5s infinite' }}>→</span>
+        </div>
       </div>
 
       <style>{`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
         @keyframes slideUp {
           from { opacity: 0; transform: translateY(40px); }
           to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounceX {
+          0%, 100% { transform: translateX(0); }
+          50% { transform: translateX(5px); }
         }
       `}</style>
     </section>

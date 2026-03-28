@@ -4,7 +4,7 @@ import { Flame, Star, Award } from 'lucide-react'
 const menuItems = [
   {
     id: 'gorditas',
-    name: 'Gorditas',
+    name: 'Tías (Gorditas)',
     description: 'Rellenas de chicharrón, rajas, frijol, picadillo y más. Hechas con masa de maíz fresca.',
     image: '/assets/gorditas-menu.png',
     price: 'Desde $25',
@@ -14,7 +14,7 @@ const menuItems = [
   },
   {
     id: 'flautas',
-    name: 'Flautas',
+    name: 'Mamichulas (flautas en vaso)',
     description: 'Doradas y crujientes, rellenas de pollo o papa. Servidas con crema, lechuga y salsa.',
     image: '/assets/flautas-menu.png',
     price: 'Desde $30',

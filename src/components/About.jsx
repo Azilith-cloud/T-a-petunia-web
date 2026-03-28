@@ -70,18 +70,11 @@ export default function About() {
 
             <div className="space-y-4">
               <p className="reveal text-lg text-teal-dark/70 leading-relaxed" style={{ transitionDelay: '0.2s' }}>
-                Tía Petunia nació de la tradición familiar, donde cada receta se hereda con cariño de generación en generación. 
-                Nuestra abuelita siempre decía: <em className="text-pink font-semibold">"la comida hecha con amor se saborea diferente"</em>.
+                Tía Petunia es más que un restaurante: es un abrazo servido en un plato. Nació del amor, de la necesidad y de la fuerza de una mujer que decidió transformar su historia en algo que alimenta el alma.
               </p>
 
               <p className="reveal text-lg text-teal-dark/70 leading-relaxed" style={{ transitionDelay: '0.3s' }}>
-                Con ingredientes frescos, masa hecha a mano cada mañana y salsas preparadas con recetas secretas, 
-                cada gordita, flauta y quesadilla es un pedacito de hogar.
-              </p>
-
-              <p className="reveal text-lg text-teal-dark/70 leading-relaxed" style={{ transitionDelay: '0.4s' }}>
-                Nuestro sueño siempre fue compartir el sabor casero con todos. Y ahora, 
-                <span className="font-bold text-teal"> Tía Petunia te invita a su mesa</span>.
+                Es un homenaje vivo a las mujeres de su familia —a sus tías, a su madre, a esas manos que cocinaron con cariño y sostuvieron generaciones—. Cada receta guarda un recuerdo, cada sabor cuenta una historia y cada cliente se convierte en parte de esa mesa donde siempre hay lugar para uno más.
               </p>
             </div>
 
