@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative flex overflow-hidden bg-[#094E5A] w-full items-center min-h-[95vh] md:min-h-[85vh]"
+      className="relative flex overflow-hidden bg-[#094E5A] w-full min-h-[100dvh] md:min-h-[85vh]"
     >
       {/* Background Image */}
       <div 
@@ -20,7 +20,7 @@ export default function Hero() {
       </div>
 
       {/* Content Container (Creates a tall, defined zone to safely place the absolute mascot at its bottom right corner) */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 flex flex-col justify-center pt-32 pb-[350px] sm:pb-[420px] md:pb-24 min-h-[95vh] md:min-h-[85vh]">
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 flex flex-col justify-center pt-32 pb-[350px] sm:pb-[420px] md:pb-24 min-h-[100dvh] md:min-h-[85vh]">
         
         {/* Left text content */}
         <div className="w-full md:w-[60%] lg:w-[50%] text-left animate-slide-up relative z-20">
@@ -50,7 +50,7 @@ export default function Hero() {
 
         {/* Mascot (Always Absolutely Positioned relative to the 1280px Container, so it never floats away on ultrawide nor shifts vertically into the text) */}
         <div 
-          className="absolute bottom-0 right-[-10px] md:right-[-40px] lg:right-[-60px] xl:right-[-80px] z-10 animate-slide-up pointer-events-none flex justify-center md:justify-end"
+          className="absolute bottom-0 left-0 right-0 md:left-auto md:right-[-40px] lg:right-[-60px] xl:right-[-80px] z-10 animate-slide-up pointer-events-none flex justify-center md:justify-end"
           style={{ animationDelay: '0.2s', width: 'auto' }}
         >
           <div className="relative flex justify-center items-end">
