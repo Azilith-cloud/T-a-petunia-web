@@ -757,8 +757,9 @@ function ItemModal({ item, onClose }) {
           borderRadius: '28px',
           overflow: 'hidden',
           maxWidth: '840px',
-          width: '100%',
-          maxHeight: '90vh',
+          width: 'calc(100% - 32px)',
+          maxHeight: 'min(90vh, 800px)',
+          margin: '16px',
           display: 'flex',
           flexDirection: 'column',
           boxShadow: '0 32px 80px -12px rgba(0,0,0,0.35)',
@@ -772,7 +773,7 @@ function ItemModal({ item, onClose }) {
             alt={item.name}
             style={{
               width: '100%',
-              maxHeight: '60vh',
+              maxHeight: 'clamp(200px, 40vh, 400px)',
               objectFit: 'contain',
               objectPosition: 'center',
               display: 'block',
@@ -827,7 +828,7 @@ function ItemModal({ item, onClose }) {
 
         {/* Content */}
         <div style={{
-          padding: '28px 32px 32px',
+          padding: 'clamp(20px, 4vw, 28px) clamp(20px, 5vw, 32px) clamp(24px, 5vw, 32px)',
           overflowY: 'auto',
           display: 'flex', flexDirection: 'column', gap: '12px',
         }}>
@@ -1070,15 +1071,22 @@ export default function MenuPage() {
       <div style={{
         position: 'relative',
         width: '100%',
+        minHeight: 'clamp(340px, 60vh, 550px)',
         overflow: 'hidden',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}>
         {/* Background image */}
         <img
           src="/assets/eventomenu1.png"
           alt=""
           style={{
+            position: 'absolute',
+            inset: 0,
             width: '100%',
-            height: 'auto',
+            height: '100%',
+            objectFit: 'cover',
             display: 'block',
             zIndex: 0,
           }}
@@ -1093,15 +1101,12 @@ export default function MenuPage() {
 
         {/* Content */}
         <div style={{ 
-          position: 'absolute', 
+          position: 'relative', 
           zIndex: 2, 
           maxWidth: '700px',
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-50%, -50%)',
           textAlign: 'center',
           width: '100%',
-          padding: '20px',
+          padding: '40px 20px',
         }}>
           <span style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
@@ -1118,7 +1123,7 @@ export default function MenuPage() {
 
           <h1 style={{
             fontFamily: 'var(--font-heading)',
-            fontSize: 'clamp(2.8rem, 7vw, 4.5rem)',
+            fontSize: 'clamp(2.4rem, 8vw, 4.5rem)',
             color: '#fff', margin: '0 0 16px', lineHeight: 1.1,
             fontStyle: 'italic',
             textShadow: '0 4px 20px rgba(0,0,0,0.3)',
@@ -1279,7 +1284,7 @@ export default function MenuPage() {
 
       {/* ── Grid ── */}
 
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '56px 20px 100px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: 'clamp(32px, 5vw, 56px) 20px clamp(60px, 10vw, 100px)' }}>
         <div style={{
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
           marginBottom: '32px', flexWrap: 'wrap', gap: '12px',
@@ -1323,7 +1328,7 @@ export default function MenuPage() {
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
-            gap: '24px',
+            gap: 'clamp(16px, 3vw, 24px)',
           }}>
             {filtered.map((item, i) => (
               <MenuCard key={item.id} item={item} index={i} onOpen={handleOpen} />
