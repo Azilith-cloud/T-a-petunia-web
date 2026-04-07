@@ -9,102 +9,300 @@ import {
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 const categories = [
-  { id: 'todos',        label: 'Todo el Menú',        Icon: UtensilsCrossed },
-  { id: 'gorditas',    label: 'Tías (Gorditas)',             Icon: Sandwich },
-  { id: 'flautas',    label: 'Flautas & Mamichulas', Icon: UtensilsCrossed },
-  { id: 'quesadillas', label: 'Quesadillas',          Icon: Salad },
-  { id: 'lonches',    label: 'Lonches',              Icon: Sandwich },
-  { id: 'birrias',    label: 'Birrias',              Icon: Beef },
-  { id: 'aguas',      label: 'Aguas Frescas',        Icon: GlassWater },
+  { id: 'todos',          label: 'Todo el Menú',           Icon: UtensilsCrossed },
+  { id: 'gorditas',      label: 'Tías (Gorditas)',         Icon: Sandwich },
+  { id: 'flautas',      label: 'Flautas & Mamichulas',    Icon: UtensilsCrossed },
+  { id: 'quesadillas',   label: 'Quesadillas',            Icon: Salad },
+  { id: 'nalgaditas',    label: 'Nalgaditas',              Icon: Flame },
+  { id: 'lonches',      label: 'Lonches',                 Icon: Sandwich },
+  { id: 'birrias',      label: 'Birrias',                 Icon: Beef },
+  { id: 'nachiquiles',  label: 'Nachiquiles',              Icon: Flame },
+  { id: 'apapachos',    label: 'Apapachos (Dulces)',      Icon: Heart },
+  { id: 'pellizcadas',  label: 'Pellizcadas',             Icon: Wheat },
+  { id: 'bebidas',      label: 'Bebidas',                 Icon: GlassWater },
+  { id: 'aguas',        label: 'Aguas Frescas',           Icon: Droplets },
 ]
 
 const menuItems = [
   // Gorditas
   {
-    id: 'gordita-chilaquiles',
+    id: 'gordita-carlota',
     category: 'gorditas',
-    name: 'Tía Chilaquiles',
-    description: 'Nuestra especialidad. Masa de maíz rellena de chilaquiles con crema y queso. ¡Imperdible!',
-    image: '/assets/gordita chilaquiles.jpeg',
-    price: 'Desde $35',
-    badge: 'Especialidad',
+    name: 'Tía Carlota',
+    description: 'Relleno: Chilaquiles',
+    image: '/assets/chilaquiles rojos gordita.png',
+    price: '$40',
+    badge: 'Chilaquiles',
     BadgeIcon: Star,
     badgeColor: '#E91E8C',
     tag: 'Tías (Gorditas)',
   },
   {
-    id: 'gorditas-2',
+    id: 'gordita-kaly',
     category: 'gorditas',
-    name: 'Tía Surtida',
-    description: 'Chicharrón, rajas, frijoles, picadillo y más rellenos. Crujientes y esponjosas.',
-    image: '/assets/gorditas 2.jpeg',
-    price: 'Desde $25',
-    badge: 'Popular',
+    name: 'Tía Kaly',
+    description: 'Relleno: Champiñon con chile morita',
+    image: '/assets/champigordita.png',
+    price: '$40',
+    badge: 'Champiñon',
     BadgeIcon: Flame,
     badgeColor: '#F5A623',
     tag: 'Tías (Gorditas)',
   },
   {
-    id: 'gorditas-corazon',
+    id: 'gordita-martha',
     category: 'gorditas',
-    name: 'Tía Corazón',
-    description: 'Hechas con amor y los mejores ingredientes. Masa suave con relleno a tu elección.',
-    image: '/assets/gorditas corazon.jpeg',
-    price: 'Desde $25',
-    badge: 'Especial',
+    name: 'Tía Martha',
+    description: 'Relleno: Cochinita Pibil',
+    image: '/assets/cochinita pibil.png',
+    price: '$40',
+    badge: 'Cochinita',
     BadgeIcon: Heart,
     badgeColor: '#D42F2F',
     tag: 'Tías (Gorditas)',
   },
   {
-    id: 'gorditas-fresh',
+    id: 'gordita-eva',
     category: 'gorditas',
-    name: 'Tía Fresca',
-    description: 'Recién hechas en el momento, con masa de maíz artesanal y rellenos al gusto.',
+    name: 'Tía Tina',
+    description: 'Relleno: Pollo con mole',
+    image: '/assets/pollo con mole.png',
+    price: '$40',
+    badge: 'Mole',
+    BadgeIcon: Leaf,
+    badgeColor: '#0D6E7E',
+    tag: 'Tías (Gorditas)',
+  },
+  {
+    id: 'gordita-sofia',
+    category: 'gorditas',
+    name: 'Tía Sofia',
+    description: 'Relleno: Frijoles adobados',
+    image: '/assets/frijolesadobadosgordita.png',
+    price: '$40',
+    badge: 'Frijoles',
+    BadgeIcon: Star,
+    badgeColor: '#E91E8C',
+    tag: 'Tías (Gorditas)',
+  },
+  {
+    id: 'gordita-chelitin',
+    category: 'gorditas',
+    name: 'Tía Chelitin',
+    description: 'Relleno: Pancita',
+    image: '/assets/gordita pancita.png',
+    price: '$40',
+    badge: 'Pancita',
+    BadgeIcon: Flame,
+    badgeColor: '#F5A623',
+    tag: 'Tías (Gorditas)',
+  },
+  {
+    id: 'gordita-rosy',
+    category: 'gorditas',
+    name: 'Tía Rosy',
+    description: 'Relleno: Rajas con elote',
+    image: '/assets/rajas con nopal.png',
+    price: '$40',
+    badge: 'Rajas',
+    BadgeIcon: Heart,
+    badgeColor: '#D42F2F',
+    tag: 'Tías (Gorditas)',
+  },
+  {
+    id: 'gordita-lupe',
+    category: 'gorditas',
+    name: 'Tía Lupe',
+    description: 'Relleno: Pollo con nopales',
+    image: '/assets/pollo con nopales.png',
+    price: '$40',
+    badge: 'Pollo',
+    BadgeIcon: Leaf,
+    badgeColor: '#0D6E7E',
+    tag: 'Tías (Gorditas)',
+  },
+  {
+    id: 'gordita-tita',
+    category: 'gorditas',
+    name: 'Tía Tita',
+    description: 'Relleno: Barbacoa',
+    image: '/assets/barbacoa.png',
+    price: '$40',
+    badge: 'Barbacoa',
+    BadgeIcon: Star,
+    badgeColor: '#E91E8C',
+    tag: 'Tías (Gorditas)',
+  },
+  {
+    id: 'gordita-hermila',
+    category: 'gorditas',
+    name: 'Tía Hermila',
+    description: 'Relleno: Chicharron seco',
+    image: '/assets/gorditas 2.jpeg',
+    price: '$45',
+    badge: 'Chicharron',
+    BadgeIcon: Flame,
+    badgeColor: '#F5A623',
+    tag: 'Tías (Gorditas)',
+  },
+  {
+    id: 'gordita-serafina',
+    category: 'gorditas',
+    name: 'Tía Serafina',
+    description: 'Relleno: Costilla en salsa verde',
     image: '/assets/gorditas jpeg.jpeg',
-    price: 'Desde $25',
-    badge: 'Artesanal',
+    price: '$40',
+    badge: 'Costilla',
+    BadgeIcon: Heart,
+    badgeColor: '#D42F2F',
+    tag: 'Tías (Gorditas)',
+  },
+  {
+    id: 'gordita-gloria',
+    category: 'gorditas',
+    name: 'Tía Gloria',
+    description: 'Relleno: Bistec en salsa pasilla',
+    image: '/assets/bistec en salsa pasilla.png',
+    price: '$40',
+    badge: 'Bistec',
+    BadgeIcon: Leaf,
+    badgeColor: '#0D6E7E',
+    tag: 'Tías (Gorditas)',
+  },
+  {
+    id: 'gordita-lle',
+    category: 'gorditas',
+    name: 'Tía lle',
+    description: 'Relleno: Chorizo con papas',
+    image: '/assets/chorizo con papas.png',
+    price: '$40',
+    badge: 'Chorizo',
+    BadgeIcon: Star,
+    badgeColor: '#E91E8C',
+    tag: 'Tías (Gorditas)',
+  },
+  {
+    id: 'gordita-faby',
+    category: 'gorditas',
+    name: 'Tía Faby',
+    description: 'Relleno: Pastor',
+    image: '/assets/gorditapastor.png',
+    price: '$45',
+    badge: 'Pastor',
+    BadgeIcon: Flame,
+    badgeColor: '#F5A623',
+    tag: 'Tías (Gorditas)',
+  },
+  {
+    id: 'gordita-esty',
+    category: 'gorditas',
+    name: 'Tía Ruth',
+    description: 'Relleno: Lengua en salsa verde',
+    image: '/assets/lengua en salsaverde.png',
+    price: '$45',
+    badge: 'Lengua',
+    BadgeIcon: Heart,
+    badgeColor: '#D42F2F',
+    tag: 'Tías (Gorditas)',
+  },
+  {
+    id: 'gordita-extra',
+    category: 'gorditas',
+    name: 'Queso extra',
+    description: 'Agrega queso extra a tu gordita',
+    image: '/assets/quesadilla.jpeg',
+    price: '$5',
+    badge: 'Queso',
     BadgeIcon: Leaf,
     badgeColor: '#0D6E7E',
     tag: 'Tías (Gorditas)',
   },
   // Flautas / Mamichulas
   {
-    id: 'mamichulas-vaso',
+    id: 'mamichulas-petite',
     category: 'flautas',
-    name: 'Mamichulas',
-    description: 'Nuestro producto estrella. Flautas en vaso crujientes, con crema, queso, lechuga y salsa especial.',
+    name: 'Mamichulas Petite — 5 pzas',
+    description: 'Con queso o sin queso, tú eliges. Nota: aumenta $10 si son de un solo sabor.',
     image: '/assets/mamichulas vaso.jpeg',
-    price: 'Desde $55',
-    badge: 'Estrella',
+    price: '$80',
+    badge: 'Petite',
     BadgeIcon: Star,
     badgeColor: '#E91E8C',
     tag: 'Flautas & Mamichulas',
   },
   {
-    id: 'comida-lista',
+    id: 'mamichulas-jumbo-4',
     category: 'flautas',
-    name: 'Flautas de la Casa',
-    description: 'Doradas al instante, rellenas de pollo o papa, servidas con guarnición completa.',
-    image: '/assets/aqui tenemos la comida lista.jpeg',
-    price: 'Desde $30',
-    badge: 'Favoritas',
+    name: 'Mamichulas Jumbo — 4 pzas',
+    description: 'Con queso o sin queso, tú eliges. Nota: aumenta $10 si son de un solo sabor.',
+    image: '/assets/mamichulas vaso.jpeg',
+    price: '$90',
+    badge: 'Jumbo',
     BadgeIcon: Trophy,
     badgeColor: '#F5A623',
     tag: 'Flautas & Mamichulas',
   },
+  {
+    id: 'mamichulas-jumbo-3',
+    category: 'flautas',
+    name: 'Mamichulas Jumbo — 3 pzas',
+    description: 'Con queso o sin queso, tú eliges. Nota: aumenta $10 si son de un solo sabor.',
+    image: '/assets/mamichulas vaso.jpeg',
+    price: '$80',
+    badge: 'Jumbo',
+    BadgeIcon: Flame,
+    badgeColor: '#F5A623',
+    tag: 'Flautas & Mamichulas',
+  },
+  {
+    id: 'mami-birrias-combo',
+    category: 'flautas',
+    name: 'Mami Birrias — 5 pzas',
+    description: '5 piezas de mamichulas de birria con 250ml de consomé incluido. La combinación perfecta.',
+    image: '/assets/mami birrias.jpeg',
+    price: '$129',
+    badge: 'Con Consomé',
+    BadgeIcon: Crown,
+    badgeColor: '#D42F2F',
+    tag: 'Flautas & Mamichulas',
+  },
+
   // Quesadillas
   {
-    id: 'quesadilla',
+    id: 'quesadilla-frita',
     category: 'quesadillas',
-    name: 'Quesadillas',
-    description: 'Con queso Oaxaca derretido. De huitlacoche, flor de calabaza, champiñones y más.',
+    name: 'Quesadillas Fritas',
+    description: 'Quesadillas crujientes recién fritas, con queso derretido y tu relleno favorito.',
     image: '/assets/quesadilla.jpeg',
-    price: 'Desde $20',
-    badge: 'Clásicas',
+    price: '$40',
+    badge: 'Crujientes',
+    BadgeIcon: Flame,
+    badgeColor: '#F5A623',
+    tag: 'Quesadillas',
+  },
+  {
+    id: 'quesadilla-frita-guisado',
+    category: 'quesadillas',
+    name: 'Quesadillas Fritas con Guisado',
+    description: 'Quesadillas fritas rellenas de guisado del día. Crema, queso y salsa al gusto.',
+    image: '/assets/quesadilla.jpeg',
+    price: '$45',
+    badge: 'Con Guisado',
+    BadgeIcon: Star,
+    badgeColor: '#E91E8C',
+    tag: 'Quesadillas',
+  },
+  {
+    id: 'nalgaditas',
+    category: 'nalgaditas',
+    name: 'Nalgaditas',
+    description: 'Gordita frita rellena de chicharón. Crujiente por fuera, jugosa por dentro.',
+    image: '/assets/nalgaditachicharron.png',
+    price: '$45',
+    badge: 'Especial',
     BadgeIcon: Award,
     badgeColor: '#0D6E7E',
-    tag: 'Quesadillas',
+    tag: 'Nalgaditas',
   },
   // Lonches
   {
@@ -133,6 +331,18 @@ const menuItems = [
     tag: 'Birrias',
   },
   {
+    id: 'tacos-barbacoa',
+    category: 'birrias',
+    name: 'Tacos de Barbacoa',
+    description: 'Orden o pieza de barbacoa tierna y jugosa en tortilla de maíz. Con cilantro, cebolla y salsa.',
+    image: '/assets/mami birrias.jpeg',
+    price: '$35',
+    badge: 'Barbacoa',
+    BadgeIcon: Star,
+    badgeColor: '#D42F2F',
+    tag: 'Birrias',
+  },
+  {
     id: 'sin-complicarte',
     category: 'lonches',
     name: 'Combo Sin Complicarte',
@@ -143,6 +353,214 @@ const menuItems = [
     BadgeIcon: Zap,
     badgeColor: '#0D6E7E',
     tag: 'Lonches',
+  },
+  // Nachiquiles
+  {
+    id: 'nachiquiles-rojos',
+    category: 'nachiquiles',
+    name: 'Nachiquiles Rojos',
+    description: 'Nachos crujientes bañados en salsa roja casera con todos los complementos. Con queso fundido.',
+    image: '/assets/gordita chilaquiles.jpeg',
+    price: '$75',
+    badge: 'Rojos',
+    BadgeIcon: Flame,
+    badgeColor: '#D42F2F',
+    tag: 'Nachiquiles',
+  },
+  {
+    id: 'nachiquiles-verdes',
+    category: 'nachiquiles',
+    name: 'Nachiquiles Verdes',
+    description: 'Nachos crujientes bañados en salsa verde casera con todos los complementos. Con queso fundido.',
+    image: '/assets/gordita chilaquiles.jpeg',
+    price: '$75',
+    badge: 'Verdes',
+    BadgeIcon: Leaf,
+    badgeColor: '#16A34A',
+    tag: 'Nachiquiles',
+  },
+  {
+    id: 'nachiquiles-morados',
+    category: 'nachiquiles',
+    name: 'Nachiquiles Morados (Chipotle)',
+    description: 'Nachos bañados en salsa de chipotle ahumada. Sabor intenso y único con queso fundido.',
+    image: '/assets/gordita chilaquiles.jpeg',
+    price: '$75',
+    badge: 'Chipotle',
+    BadgeIcon: Star,
+    badgeColor: '#7C3AED',
+    tag: 'Nachiquiles',
+  },
+  {
+    id: 'nachiquiles-casa',
+    category: 'nachiquiles',
+    name: 'Nachiquiles de la Casa',
+    description: 'La receta secreta de Tía Petunia. Combinación especial de salsas con todos los toppings.',
+    image: '/assets/gordita chilaquiles.jpeg',
+    price: '$75',
+    badge: 'Especial',
+    BadgeIcon: Crown,
+    badgeColor: '#E91E8C',
+    tag: 'Nachiquiles',
+  },
+  {
+    id: 'nachiquiles-proteina',
+    category: 'nachiquiles',
+    name: 'Extra Proteína',
+    description: 'Agrega huevo, pollo o chicharrón a tus nachiquiles. ¡El toque extra que necesitas!',
+    image: '/assets/gordita chilaquiles.jpeg',
+    price: '+$20',
+    badge: 'Extra',
+    BadgeIcon: Award,
+    badgeColor: '#F5A623',
+    tag: 'Nachiquiles',
+  },
+  // Apapachos (Gorditas Dulces)
+  {
+    id: 'apapacho-chila',
+    category: 'apapachos',
+    name: 'Tía Chila',
+    description: 'Gordita dulce rellena de queso crema con mermelada. Un capricho dulce hecho con amor.',
+    image: '/assets/crema con mermelada.png',
+    price: '$50',
+    badge: 'Dulce',
+    BadgeIcon: Heart,
+    badgeColor: '#E91E8C',
+    tag: 'Apapachos',
+  },
+  {
+    id: 'apapacho-paty',
+    category: 'apapachos',
+    name: 'Tía Paty',
+    description: 'Gordita dulce rellena de dulce de leche con queso crema. Cremosa, suave y deliciosa.',
+    image: '/assets/gorditas corazon.jpeg',
+    price: '$50',
+    badge: 'Dulce de Leche',
+    BadgeIcon: Sparkles,
+    badgeColor: '#D4A017',
+    tag: 'Apapachos',
+  },
+  {
+    id: 'apapacho-arroz',
+    category: 'apapachos',
+    name: 'Arroz con Leche',
+    description: 'Clásico postre mexicano. Arroz cremoso con leche, canela y azúcar. Reconfortante y nostálgico.',
+    image: '/assets/gorditas corazon.jpeg',
+    price: '$35',
+    badge: 'Postre',
+    BadgeIcon: Star,
+    badgeColor: '#F5A623',
+    tag: 'Apapachos',
+  },
+  // Pellizcadas
+  {
+    id: 'pellizcada-mantequilla-sal',
+    category: 'pellizcadas',
+    name: 'Pellizcada con Mantequilla y Sal',
+    description: 'Masa de maíz reciente pellizcada a mano, báñada en mantequilla con sal. Simple y deliciosa.',
+    image: '/assets/gorditas jpeg.jpeg',
+    price: '$35',
+    badge: 'Clásica',
+    BadgeIcon: Wheat,
+    badgeColor: '#D4A017',
+    tag: 'Pellizcadas',
+  },
+  {
+    id: 'pellizcada-mantequilla-queso',
+    category: 'pellizcadas',
+    name: 'Pellizcada con Mantequilla y Queso',
+    description: 'Masa de maíz pellizcada, con mantequilla y queso desmoronado. El complemento perfecto.',
+    image: '/assets/gorditas jpeg.jpeg',
+    price: '$40',
+    badge: 'Con Queso',
+    BadgeIcon: Star,
+    badgeColor: '#F5A623',
+    tag: 'Pellizcadas',
+  },
+  // Bebidas
+  {
+    id: 'jugo-naranja',
+    category: 'bebidas',
+    name: 'Jugo de Naranja',
+    description: 'Jugo de naranja natural exprimido al momento. Fresco y vitaminado.',
+    image: '/assets/aguas/aguas frescas.jpeg',
+    price: '$50',
+    badge: 'Natural',
+    BadgeIcon: Droplets,
+    badgeColor: '#F5A623',
+    tag: 'Bebidas',
+  },
+  {
+    id: 'cafe-olla',
+    category: 'bebidas',
+    name: 'Café de Olla',
+    description: 'Café tradicional mexicano con canela y piloncillo. Calientito y reconfortante.',
+    image: '/assets/aguas/aguas frescas.jpeg',
+    price: '$40',
+    badge: 'Caliente',
+    BadgeIcon: Flame,
+    badgeColor: '#D42F2F',
+    tag: 'Bebidas',
+  },
+  {
+    id: 'chocomilk',
+    category: 'bebidas',
+    name: 'Chocomilk',
+    description: 'Leche chocolatada cremosa. Perfecta para acompañar tu desayuno o antojito.',
+    image: '/assets/aguas/aguas frescas.jpeg',
+    price: '$35',
+    badge: 'Cremoso',
+    BadgeIcon: Heart,
+    badgeColor: '#7C3AED',
+    tag: 'Bebidas',
+  },
+  {
+    id: 'refresco',
+    category: 'bebidas',
+    name: 'Refresco',
+    description: 'Refresco frío en lata o botella para acompañar tu platillo favorito.',
+    image: '/assets/aguas/aguas frescas.jpeg',
+    price: '$35',
+    badge: 'Frío',
+    BadgeIcon: Droplets,
+    badgeColor: '#0D6E7E',
+    tag: 'Bebidas',
+  },
+  {
+    id: 'boing',
+    category: 'bebidas',
+    name: 'Boing',
+    description: 'Jugo Boing de temporada. Sabores: guayaba, mango, fresa y más.',
+    image: '/assets/aguas/aguas frescas.jpeg',
+    price: '$30',
+    badge: 'Jugoso',
+    BadgeIcon: Star,
+    badgeColor: '#E91E8C',
+    tag: 'Bebidas',
+  },
+  {
+    id: 'agua-natural',
+    category: 'bebidas',
+    name: 'Agua Natural (Medio Litro)',
+    description: 'Agua embotellada natural de medio litro para hidratarte.',
+    image: '/assets/aguas/aguas frescas.jpeg',
+    price: '$20',
+    badge: 'Pura',
+    BadgeIcon: Droplets,
+    badgeColor: '#1A9AAE',
+    tag: 'Bebidas',
+  },
+  {
+    id: 'agua-fresca-litro',
+    category: 'bebidas',
+    name: 'Agua Fresca (1 Litro)',
+    description: 'Un litro de nuestras aguas frescas artesanales del día. Elige tu sabor favorito.',
+    image: '/assets/aguas/aguas frescas.jpeg',
+    price: '$55',
+    badge: 'Artesanal',
+    BadgeIcon: Sparkles,
+    badgeColor: '#16A34A',
+    tag: 'Bebidas',
   },
   // Aguas
   {
@@ -626,8 +1044,12 @@ export default function MenuPage() {
   const [activeCategory, setActiveCategory] = useState('todos')
   const [search, setSearch] = useState('')
   const [selectedItem, setSelectedItem] = useState(null)
+  const tabsRef = useRef(null)
   const handleOpen  = useCallback((item) => setSelectedItem(item), [])
   const handleClose = useCallback(() => setSelectedItem(null), [])
+  const scrollTabs  = useCallback((dir) => {
+    if (tabsRef.current) tabsRef.current.scrollBy({ left: dir * 180, behavior: 'smooth' })
+  }, [])
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
@@ -647,25 +1069,17 @@ export default function MenuPage() {
       {/* ── Hero banner ── */}
       <div style={{
         position: 'relative',
-        minHeight: '420px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
+        width: '100%',
         overflow: 'hidden',
-        padding: '120px 20px 100px',
       }}>
         {/* Background image */}
         <img
-          src="/assets/menu-hero-bg.png"
+          src="/assets/eventomenu1.png"
           alt=""
           style={{
-            position: 'absolute',
-            inset: 0,
             width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: 'center',
+            height: 'auto',
+            display: 'block',
             zIndex: 0,
           }}
         />
@@ -678,7 +1092,17 @@ export default function MenuPage() {
         }} />
 
         {/* Content */}
-        <div style={{ position: 'relative', zIndex: 2, maxWidth: '700px' }}>
+        <div style={{ 
+          position: 'absolute', 
+          zIndex: 2, 
+          maxWidth: '700px',
+          left: '50%',
+          top: '50%',
+          transform: 'translate(-50%, -50%)',
+          textAlign: 'center',
+          width: '100%',
+          padding: '20px',
+        }}>
           <span style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
             background: 'rgba(255,255,255,0.12)',
@@ -739,50 +1163,122 @@ export default function MenuPage() {
       {/* ── Category Tabs ── */}
       <div style={{
         position: 'sticky', top: '64px', zIndex: 40,
-        background: 'rgba(255,248,240,0.95)',
-        backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)',
-        borderBottom: '1px solid rgba(0,0,0,0.06)',
-        padding: '0 16px',
-        boxShadow: '0 2px 16px rgba(0,0,0,0.06)',
+        background: 'rgba(255,248,240,0.97)',
+        backdropFilter: 'blur(14px)', WebkitBackdropFilter: 'blur(14px)',
+        borderBottom: '1px solid rgba(0,0,0,0.07)',
+        boxShadow: '0 2px 20px rgba(0,0,0,0.08)',
       }}>
-        <div style={{
-          maxWidth: '1200px', margin: '0 auto',
-          display: 'flex', gap: '4px', overflowX: 'auto',
-          padding: '12px 0',
-          scrollbarWidth: 'none', msOverflowStyle: 'none',
-        }}>
-          {categories.map(cat => {
-            const CatIcon = cat.Icon
-            const active = activeCategory === cat.id
-            return (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                style={{
-                  whiteSpace: 'nowrap',
-                  padding: '8px 18px',
-                  borderRadius: '100px',
-                  border: 'none',
-                  cursor: 'pointer',
-                  fontFamily: 'var(--font-body)',
-                  fontWeight: 600,
-                  fontSize: '0.82rem',
-                  transition: 'all 0.25s',
-                  background: active ? 'linear-gradient(135deg, #0D6E7E, #1A9AAE)' : 'rgba(13,110,126,0.08)',
-                  color: active ? '#fff' : '#094E5A',
-                  boxShadow: active ? '0 4px 14px rgba(13,110,126,0.3)' : 'none',
-                  transform: active ? 'scale(1.03)' : 'scale(1)',
-                  display: 'inline-flex', alignItems: 'center', gap: '6px',
-                }}
-              >
-                <CatIcon size={14} /> {cat.label}
-              </button>
-            )
-          })}
+        <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', display: 'flex', alignItems: 'center' }}>
+
+          {/* Left arrow */}
+          <button
+            onClick={() => scrollTabs(-1)}
+            aria-label="Scroll izquierda"
+            style={{
+              flexShrink: 0, width: '36px', height: '36px',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              background: 'rgba(9,78,90,0.08)', border: 'none', borderRadius: '50%',
+              cursor: 'pointer', margin: '8px 4px 8px 12px',
+              color: '#094E5A', transition: 'background 0.2s',
+              fontSize: '1.3rem', fontWeight: 'bold', lineHeight: 1,
+              zIndex: 2,
+            }}
+            onMouseEnter={e => e.currentTarget.style.background = 'rgba(9,78,90,0.18)'}
+            onMouseLeave={e => e.currentTarget.style.background = 'rgba(9,78,90,0.08)'}
+          >
+            ‹
+          </button>
+
+          {/* Fade left */}
+          <div style={{
+            position: 'absolute', left: '52px', top: 0, bottom: 0, width: '32px',
+            background: 'linear-gradient(to right, rgba(255,248,240,0.97), transparent)',
+            zIndex: 1, pointerEvents: 'none',
+          }} />
+
+          {/* Scrollable tabs */}
+          <div
+            ref={tabsRef}
+            style={{
+              flex: 1, display: 'flex', gap: '6px',
+              overflowX: 'auto', padding: '10px 8px',
+              scrollbarWidth: 'none', msOverflowStyle: 'none',
+              WebkitOverflowScrolling: 'touch',
+            }}
+          >
+            {categories.map(cat => {
+              const CatIcon = cat.Icon
+              const active = activeCategory === cat.id
+              return (
+                <button
+                  key={cat.id}
+                  data-cat={cat.id}
+                  onClick={() => {
+                    setActiveCategory(cat.id)
+                    const btn = tabsRef.current?.querySelector(`[data-cat="${cat.id}"]`)
+                    btn?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+                  }}
+                  style={{
+                    whiteSpace: 'nowrap', flexShrink: 0,
+                    padding: active ? '9px 22px' : '8px 18px',
+                    borderRadius: '100px', border: 'none',
+                    cursor: 'pointer',
+                    fontFamily: 'var(--font-body)', fontWeight: 600,
+                    fontSize: '0.82rem',
+                    transition: 'all 0.25s cubic-bezier(0.34,1.56,0.64,1)',
+                    background: active
+                      ? 'linear-gradient(135deg, #E91E8C, #F5A623)'
+                      : 'rgba(13,110,126,0.08)',
+                    color: active ? '#fff' : '#094E5A',
+                    boxShadow: active ? '0 6px 18px rgba(233,30,140,0.35)' : 'none',
+                    transform: active ? 'scale(1.06)' : 'scale(1)',
+                    display: 'inline-flex', alignItems: 'center', gap: '6px',
+                  }}
+                >
+                  <CatIcon size={14} /> {cat.label}
+                </button>
+              )
+            })}
+          </div>
+
+          {/* Fade right */}
+          <div style={{
+            position: 'absolute', right: '52px', top: 0, bottom: 0, width: '32px',
+            background: 'linear-gradient(to left, rgba(255,248,240,0.97), transparent)',
+            zIndex: 1, pointerEvents: 'none',
+          }} />
+
+          {/* Right arrow */}
+          <button
+            onClick={() => scrollTabs(1)}
+            aria-label="Scroll derecha"
+            style={{
+              flexShrink: 0, width: '36px', height: '36px',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              background: 'rgba(9,78,90,0.08)', border: 'none', borderRadius: '50%',
+              cursor: 'pointer', margin: '8px 12px 8px 4px',
+              color: '#094E5A', transition: 'background 0.2s',
+              fontSize: '1.3rem', fontWeight: 'bold', lineHeight: 1,
+            }}
+            onMouseEnter={e => e.currentTarget.style.background = 'rgba(9,78,90,0.18)'}
+            onMouseLeave={e => e.currentTarget.style.background = 'rgba(9,78,90,0.08)'}
+          >
+            ›
+          </button>
         </div>
+
+        {/* Hint desliza - solo mobile */}
+        <p style={{
+          textAlign: 'center', margin: '0', paddingBottom: '5px',
+          fontFamily: 'var(--font-body)', fontSize: '0.66rem',
+          color: 'rgba(9,78,90,0.38)', letterSpacing: '0.04em',
+        }}>
+          ← Desliza para explorar categorías →
+        </p>
       </div>
 
       {/* ── Grid ── */}
+
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '56px 20px 100px' }}>
         <div style={{
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',

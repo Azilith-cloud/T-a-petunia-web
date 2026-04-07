@@ -24,7 +24,7 @@ export default function Footer() {
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
               Tías (gorditas), mamichulas (flautas en vaso), quesadillas y nuestra famosa Tía Chilaquiles.
-              Sabor casero hecho con amor desde hace más de 15 años.
+              Sabor casero hecho con amor desde hace más de 11 años.
             </p>
             {/* Social */}
             <div className="flex gap-3 mt-6 justify-center md:justify-start">
@@ -59,10 +59,10 @@ export default function Footer() {
                 <Phone size={14} /> Pedidos al teléfono
               </p>
               <a 
-                href="tel:3329387442" 
+                href="tel:3314436726" 
                 className="text-orange-light text-xl font-bold mt-1 block hover:text-white transition-colors duration-300"
               >
-                33 2938 7442
+                33 1443 6726
               </a>
             </div>
           </div>

@@ -49,7 +49,7 @@ export default function Especialidad() {
               
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="/assets/gordita-chilaquiles.png"
+                  src="/assets/gordita chilaquiles.jpeg"
                   alt="Tía Chilaquiles"
                   className="w-full h-80 md:h-[28rem] object-cover"
                 />

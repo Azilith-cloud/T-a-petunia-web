@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 const cards = [
   { id: 'gorditas', label: 'Tías (Gorditas)', image: '/assets/gorditas 2.jpeg' },
-  { id: 'flautas', label: 'Mamichulas (flautas en vaso)', image: '/assets/aqui tenemos la comida lista.jpeg' },
+  { id: 'flautas', label: 'Mamichulas (flautas en vaso)', image: '/assets/mamichulas vaso.jpeg' },
   { id: 'quesadillas', label: 'Quesadillas', image: '/assets/quesadilla.jpeg' },
   { id: 'especialidades', label: 'Especialidades', image: '/assets/mami birrias.jpeg' },
   { id: 'lonches', label: 'Lonches', image: '/assets/lonches.jpeg' },

@@ -6,10 +6,12 @@ import Promociones from './components/Promociones'
 import Menu from './components/Menu'
 import Especialidad from './components/Especialidad'
 import About from './components/About'
+import EventForm from './components/EventForm'
 import Footer from './components/Footer'
 import PromocionesPage from './pages/PromocionesPage'
 import MenuPage from './pages/MenuPage'
 import QuickSelection from './components/QuickSelection'
+import WhatsAppButton from './components/WhatsAppButton'
 
 function HomePage() {
   return (
@@ -21,6 +23,7 @@ function HomePage() {
       <Menu />
       <Especialidad />
       <About />
+      <EventForm />
       <Footer />
     </>
   )
@@ -36,6 +39,7 @@ export default function App() {
           <Route path="/menu" element={<MenuPage />} />
           <Route path="/promociones" element={<PromocionesPage />} />
         </Routes>
+        <WhatsAppButton />
       </div>
     </BrowserRouter>
   )
