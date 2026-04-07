@@ -342,18 +342,7 @@ const menuItems = [
     badgeColor: '#D42F2F',
     tag: 'Birrias',
   },
-  {
-    id: 'sin-complicarte',
-    category: 'lonches',
-    name: 'Combo Sin Complicarte',
-    description: 'La combinación perfecta para salir rápido y satisfecho. Sencillo, rico y accesible.',
-    image: '/assets/sin complicarte.jpeg',
-    price: 'Desde $45',
-    badge: 'Rápido',
-    BadgeIcon: Zap,
-    badgeColor: '#0D6E7E',
-    tag: 'Lonches',
-  },
+
   // Nachiquiles
   {
     id: 'nachiquiles-rojos',
@@ -563,18 +552,7 @@ const menuItems = [
     tag: 'Bebidas',
   },
   // Aguas
-  {
-    id: 'aguas-frescas',
-    category: 'aguas',
-    name: 'Aguas Frescas',
-    description: 'Surtido completo de aguas frescas de temporada. Preparadas al momento.',
-    image: '/assets/aguas/aguas frescas.jpeg',
-    price: 'Desde $20',
-    badge: 'Frescas',
-    BadgeIcon: Droplets,
-    badgeColor: '#0D6E7E',
-    tag: 'Aguas Frescas',
-  },
+
   {
     id: 'agua-jamaica',
     category: 'aguas',
@@ -707,18 +685,7 @@ const menuItems = [
     badgeColor: '#0D6E7E',
     tag: 'Aguas Frescas',
   },
-  {
-    id: 'barra-aguas',
-    category: 'aguas',
-    name: 'Barra de Aguas de Sabores',
-    description: 'Escoge tu favorita de nuestra barra completa con más de 10 sabores del día.',
-    image: '/assets/aguas/Barra de agua de sabores.jpeg',
-    price: 'Desde $20',
-    badge: 'Elige tu sabor',
-    BadgeIcon: Sparkles,
-    badgeColor: '#6D28D9',
-    tag: 'Aguas Frescas',
-  },
+
 ]
 
 // ─── Modal ───────────────────────────────────────────────────────────────────

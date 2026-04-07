@@ -2,13 +2,11 @@ import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const cards = [
-  { id: 'gorditas', label: 'Tías (Gorditas)', image: '/assets/gorditas 2.jpeg' },
+  { id: 'gorditas', label: 'Tías (Gorditas)', image: '/assets/chilaquiles rojos gordita.png' },
   { id: 'flautas', label: 'Mamichulas (flautas en vaso)', image: '/assets/mamichulas vaso.jpeg' },
   { id: 'quesadillas', label: 'Quesadillas', image: '/assets/quesadilla.jpeg' },
   { id: 'especialidades', label: 'Especialidades', image: '/assets/mami birrias.jpeg' },
   { id: 'lonches', label: 'Lonches', image: '/assets/lonches.jpeg' },
-  { id: 'aguas', label: 'Aguas Frescas', image: '/assets/aguas/aguas frescas.jpeg' },
-  { id: 'combos', label: 'Combos Rápidos', image: '/assets/sin complicarte.jpeg' },
 ]
 
 export default function QuickSelection() {

@@ -24,7 +24,7 @@ export default function Navbar() {
     { label: 'Especialidad', href: '/#especialidad', isRoute: false },
     { label: 'Nosotros', href: '/#nosotros', isRoute: false },
     { label: 'Promociones', href: '/promociones', isRoute: true, highlight: true },
-    { label: 'Contacto', href: '/#contacto', isRoute: false },
+    { label: 'Contacto', href: '/#eventos', isRoute: false },
   ]
 
   const linkColor = isDark ? '#094E5A' : 'white'
@@ -55,7 +55,7 @@ export default function Navbar() {
         justifyContent: 'space-between',
       }}>
         {/* Logo */}
-        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+        <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
           <img
             src="/assets/logo.png"
             alt="Tía Petunia"
@@ -157,7 +157,7 @@ export default function Navbar() {
             )
           })}
           <a
-            href="/#contacto"
+            href="/#eventos"
             style={{
               marginLeft: '12px',
               padding: '10px 24px',
@@ -306,7 +306,7 @@ export default function Navbar() {
             )
           })}
           <a
-            href="/#contacto"
+            href="/#eventos"
             onClick={() => setMenuOpen(false)}
             style={{
               marginTop: '8px',
