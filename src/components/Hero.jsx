@@ -42,9 +42,8 @@ export default function Hero() {
             el alma
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-xl leading-relaxed mt-2 md:mt-4">
-            Tías (Gorditas), Mamichulas (flautas en vaso), Quesadillas y nuestra famosa{' '}
-            <span className="font-bold text-[#FFB84D]">Tía Chilaquiles</span>
+          <p className="text-lg sm:text-xl md:text-xl text-white/90 max-w-2xl leading-relaxed mt-4 md:mt-6 font-medium tracking-wide">
+            Tías (gorditas) • Mamichulas (flautas) • Kekabronas (quesadillas) • Pozole • Cabroncito • Tomasitos • MamiBirrias • Tacos de barbacoa bañados • Aguas frescas • Nachiquiles
           </p>
         </div>
 

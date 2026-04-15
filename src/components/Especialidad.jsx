@@ -50,7 +50,7 @@ export default function Especialidad() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="/assets/gordita chilaquiles.jpeg"
-                  alt="Tía Chilaquiles"
+                  alt="Tía Carlota"
                   className="w-full h-80 md:h-[28rem] object-cover"
                 />
                 {/* Overlay gradient */}
@@ -86,7 +86,7 @@ export default function Especialidad() {
               style={{ fontFamily: 'var(--font-heading)', transitionDelay: '0.1s' }}
             >
               Tía{' '}
-              <span className="text-orange-light">Chilaquiles</span>
+              <span className="text-orange-light">Carlota</span>
             </h2>
 
             <p className="reveal text-lg text-white/70 mb-8 leading-relaxed max-w-xl" style={{ transitionDelay: '0.2s' }}>
