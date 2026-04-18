@@ -2,11 +2,26 @@ import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const cards = [
-  { id: 'gorditas', label: 'Tías (Gorditas)', image: '/assets/chilaquiles rojos gordita.png' },
-  { id: 'flautas', label: 'Mamichulas (flautas en vaso)', image: '/assets/mamichulas vaso.jpeg' },
-  { id: 'quesadillas', label: 'Quesadillas', image: '/assets/quesadilla.jpeg' },
-  { id: 'especialidades', label: 'Especialidades', image: '/assets/mami birrias.jpeg' },
-  { id: 'lonches', label: 'Lonches', image: '/assets/lonches.jpeg' },
+  // Promociones destacadas — van primero
+  {
+    id: 'promo-mamichulas',
+    label: 'Mamichulas en Promoción',
+    image: '/assets/promociones/promocion mamichulas.jpeg',
+    path: '/promociones',
+    isPromo: true,
+    tag: 'Oferta Especial',
+  },
+  {
+    id: 'promo-dia-nino',
+    label: '¡Festeja el Día del Niño!',
+    image: '/assets/promociones/Dia  del nino.jpeg',
+    path: '/promociones',
+    isPromo: true,
+    tag: 'Edición Especial',
+  },
+  // Items del menú (solo los más icónicos)
+  { id: 'gorditas', label: 'Tías (Gorditas)', image: '/assets/chilaquiles rojos gordita.png', path: '/menu' },
+  { id: 'flautas', label: 'Mamichulas (flautas en vaso)', image: '/assets/mamichulas vaso.jpeg', path: '/menu' },
 ]
 
 export default function QuickSelection() {
@@ -105,12 +120,16 @@ export default function QuickSelection() {
           {cards.map((card, i) => (
             <div 
               key={card.id} 
-              onClick={(e) => handleCardClick(e, '/menu')}
+              onClick={(e) => handleCardClick(e, card.path)}
               className="relative rounded-3xl overflow-hidden group cursor-pointer shadow-2xl transition-transform duration-500 hover:-translate-y-2 shrink-0 snap-center"
               style={{ 
                 animation: `slideUp 0.6s ease-out ${i * 0.15}s both`,
                 width: 'min(85vw, 300px)',
                 aspectRatio: '4/3',
+                // Resaltar promos con un borde sutil
+                boxShadow: card.isPromo
+                  ? '0 0 0 2px rgba(233,30,140,0.6), 0 24px 48px -12px rgba(0,0,0,0.5)'
+                  : '0 24px 48px -12px rgba(0,0,0,0.4)',
               }}
             >
               <img 
@@ -121,9 +140,31 @@ export default function QuickSelection() {
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
               
+              {/* Badge de promoción */}
+              {card.isPromo && (
+                <span style={{
+                  position: 'absolute',
+                  top: '14px',
+                  left: '14px',
+                  background: 'linear-gradient(135deg, #E91E8C, #F5A623)',
+                  color: '#fff',
+                  fontSize: '0.68rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  padding: '5px 14px',
+                  borderRadius: '100px',
+                  fontFamily: 'var(--font-body)',
+                  boxShadow: '0 4px 12px rgba(233,30,140,0.45)',
+                  zIndex: 10,
+                }}>
+                  {card.tag}
+                </span>
+              )}
+
               <h3 
-                className="absolute bottom-6 left-0 right-0 text-center text-white font-bold text-2xl tracking-wide drop-shadow-xl"
-                style={{ fontFamily: 'var(--font-heading)' }}
+                className="absolute bottom-6 left-0 right-0 text-center text-white font-bold text-2xl tracking-wide drop-shadow-xl px-3"
+                style={{ fontFamily: 'var(--font-heading)', fontSize: card.isPromo ? '1.1rem' : undefined }}
               >
                 {card.label}
               </h3>

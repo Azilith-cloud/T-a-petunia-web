@@ -9,18 +9,18 @@ import {
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 const categories = [
-  { id: 'todos',          label: 'Todo el Menú',           Icon: UtensilsCrossed },
-  { id: 'gorditas',      label: 'Tías (Gorditas)',         Icon: Sandwich },
-  { id: 'flautas',      label: 'Flautas & Mamichulas',    Icon: UtensilsCrossed },
-  { id: 'quesadillas',   label: 'Quesadillas',            Icon: Salad },
-  { id: 'nalgaditas',    label: 'Nalgaditas',              Icon: Flame },
-  { id: 'lonches',      label: 'Lonches',                 Icon: Sandwich },
-  { id: 'birrias',      label: 'Birrias',                 Icon: Beef },
-  { id: 'nachiquiles',  label: 'Nachiquiles',              Icon: Flame },
-  { id: 'apapachos',    label: 'Apapachos (Dulces)',      Icon: Heart },
-  { id: 'pellizcadas',  label: 'Pellizcadas',             Icon: Wheat },
-  { id: 'bebidas',      label: 'Bebidas',                 Icon: GlassWater },
-  { id: 'aguas',        label: 'Aguas Frescas',           Icon: Droplets },
+  { id: 'todos', label: 'Todo el Menú', Icon: UtensilsCrossed },
+  { id: 'gorditas', label: 'Tías (Gorditas)', Icon: Sandwich },
+  { id: 'flautas', label: 'Flautas & Mamichulas', Icon: UtensilsCrossed },
+  { id: 'quesadillas', label: 'Quesadillas', Icon: Salad },
+  { id: 'nalgaditas', label: 'Nalgaditas', Icon: Flame },
+  { id: 'lonches', label: 'Lonches', Icon: Sandwich },
+  { id: 'birrias', label: 'Birrias', Icon: Beef },
+  { id: 'nachiquiles', label: 'Nachiquiles', Icon: Flame },
+  { id: 'apapachos', label: 'Apapachos (Dulces)', Icon: Heart },
+  { id: 'pellizcadas', label: 'Pellizcadas', Icon: Wheat },
+  { id: 'bebidas', label: 'Bebidas', Icon: GlassWater },
+  { id: 'aguas', label: 'Aguas Frescas', Icon: Droplets },
 ]
 
 const menuItems = [
@@ -30,7 +30,7 @@ const menuItems = [
     category: 'gorditas',
     name: 'Tía Carlota',
     description: 'Relleno: Chilaquiles',
-    image: '/assets/chilaquiles rojos gordita.png',
+    image: '/assets/tia carlota de petunia.png',
     price: '$40',
     badge: 'Chilaquiles',
     BadgeIcon: Star,
@@ -223,7 +223,7 @@ const menuItems = [
     category: 'flautas',
     name: 'Mamichulas Petite — 5 pzas',
     description: 'Con queso o sin queso, tú eliges. Nota: aumenta $10 si son de un solo sabor.',
-    image: '/assets/mamichulas vaso.jpeg',
+    image: '/assets/mamichulasJumbo.png',
     price: '$80',
     badge: 'Petite',
     BadgeIcon: Star,
@@ -235,7 +235,7 @@ const menuItems = [
     category: 'flautas',
     name: 'Mamichulas Jumbo — 4 pzas',
     description: 'Con queso o sin queso, tú eliges. Nota: aumenta $10 si son de un solo sabor.',
-    image: '/assets/mamichulas vaso.jpeg',
+    image: '/assets/mamichulasJumbo.png',
     price: '$90',
     badge: 'Jumbo',
     BadgeIcon: Trophy,
@@ -247,7 +247,7 @@ const menuItems = [
     category: 'flautas',
     name: 'Mamichulas Jumbo — 3 pzas',
     description: 'Con queso o sin queso, tú eliges. Nota: aumenta $10 si son de un solo sabor.',
-    image: '/assets/mamichulas vaso.jpeg',
+    image: '/assets/mamichulasJumbo.png',
     price: '$80',
     badge: 'Jumbo',
     BadgeIcon: Flame,
@@ -310,7 +310,7 @@ const menuItems = [
     category: 'lonches',
     name: 'Lonches',
     description: 'Pan artesanal relleno con proteína, crema, frijoles y los mejores complementos.',
-    image: '/assets/lonches.jpeg',
+    image: '/assets/lonches tiapetunia.jpeg',
     price: 'Desde $40',
     badge: 'Abundantes',
     BadgeIcon: Crown,
@@ -334,8 +334,8 @@ const menuItems = [
     id: 'tacos-barbacoa',
     category: 'birrias',
     name: 'Tacos de Barbacoa',
-    description: 'Orden o pieza de barbacoa tierna y jugosa en tortilla de maíz. Con cilantro, cebolla y salsa.',
-    image: '/assets/mami birrias.jpeg',
+    description: 'De los de mi pueblo . De res , bien sabrosa . Casera y con amor',
+    image: '/assets/tacos de barbacoa petunia.png',
     price: '$35',
     badge: 'Barbacoa',
     BadgeIcon: Star,
@@ -552,13 +552,24 @@ const menuItems = [
     tag: 'Bebidas',
   },
   // Aguas
-
+  {
+    id: 'agua-naranja',
+    category: 'aguas',
+    name: 'Agua de Naranja',
+    description: 'Agua fresca de naranja natural. Refrescante y llena de sabor.',
+    image: '/assets/aguas/agua de naranja.png',
+    price: 'Desde $20',
+    badge: 'Natural',
+    BadgeIcon: Droplets,
+    badgeColor: '#F5A623',
+    tag: 'Aguas Frescas',
+  },
   {
     id: 'agua-jamaica',
     category: 'aguas',
     name: 'Agua de Jamaica',
     description: 'Jamaica natural, ligeramente dulce y refrescante. Ideal para acompañar tu platillo.',
-    image: '/assets/aguas/agua de jamaica.jpeg',
+    image: '/assets/aguas/Agua jamaica.png',
     price: 'Desde $20',
     badge: 'Clásica',
     BadgeIcon: Award,
@@ -570,7 +581,7 @@ const menuItems = [
     category: 'aguas',
     name: 'Horchata',
     description: 'Cremosa y dulce, nuestra horchata de arroz es el acompañamiento perfecto.',
-    image: '/assets/aguas/agua de horchata.jpeg',
+    image: '/assets/aguas/agua de horchata.png',
     price: 'Desde $20',
     badge: 'Cremosa',
     BadgeIcon: Sparkles,
@@ -582,7 +593,7 @@ const menuItems = [
     category: 'aguas',
     name: 'Agua de Tamarindo',
     description: 'Agridulce y refrescante, sabor único que complementa cualquier platillo.',
-    image: '/assets/aguas/agua de tamarindo.jpeg',
+    image: '/assets/aguas/agua tamarindo.png',
     price: 'Desde $20',
     badge: 'Especial',
     BadgeIcon: Leaf,
@@ -594,7 +605,7 @@ const menuItems = [
     category: 'aguas',
     name: 'Limonada con Pepino',
     description: 'Fresca limonada con pepino y menta. Ideal para los días calurosos.',
-    image: '/assets/aguas/limonada con pepino.jpeg',
+    image: '/assets/aguas/limonada con pepino.png',
     price: 'Desde $22',
     badge: 'Fresca',
     BadgeIcon: Droplets,
@@ -606,7 +617,7 @@ const menuItems = [
     category: 'aguas',
     name: 'Agua de Fresas con Crema',
     description: 'Frutada y cremosa. Fresas naturales con un toque de crema. ¡Un deleite!',
-    image: '/assets/aguas/agua fresas con crema.jpeg',
+    image: '/assets/aguas/fresas con crema uhd.png',
     price: 'Desde $25',
     badge: 'Especial',
     BadgeIcon: Heart,
@@ -618,7 +629,7 @@ const menuItems = [
     category: 'aguas',
     name: 'Té Helado con Frutos Rojos',
     description: 'Té helado artesanal con frutos rojos frescos. Antioxidante y delicioso.',
-    image: '/assets/aguas/Te helado con frutos rojos.jpeg',
+    image: '/assets/aguas/te con frutosrojos.png',
     price: 'Desde $25',
     badge: 'Premium',
     BadgeIcon: Crown,
@@ -630,7 +641,7 @@ const menuItems = [
     category: 'aguas',
     name: 'Horchata con Frutos Rojos',
     description: 'La combinación perfecta de horchata cremosa con frutos rojos de temporada.',
-    image: '/assets/aguas/agua de horchata con frutos rojos.jpeg',
+    image: '/assets/aguas/horchatta y fresa.png',
     price: 'Desde $25',
     badge: 'Fusion',
     BadgeIcon: Sparkles,
@@ -642,7 +653,7 @@ const menuItems = [
     category: 'aguas',
     name: 'Agua de Piña con Menta',
     description: 'Piña tropical con menta fresca. Refrescante y tropical.',
-    image: '/assets/aguas/agua de pina con menta.jpeg',
+    image: '/assets/aguas/pina con menta.png',
     price: 'Desde $22',
     badge: 'Tropical',
     BadgeIcon: Globe2,
@@ -654,7 +665,7 @@ const menuItems = [
     category: 'aguas',
     name: 'Agua de Cebada',
     description: 'Bebida tradicional mexicana, suave y reconfortante. Hecha con cebada natural.',
-    image: '/assets/aguas/cebada.jpeg',
+    image: '/assets/aguas/aguadecebada uhd.png',
     price: 'Desde $20',
     badge: 'Tradicional',
     BadgeIcon: Wheat,
@@ -666,7 +677,7 @@ const menuItems = [
     category: 'aguas',
     name: 'Alfalfa, Piña y Limón',
     description: 'Verde, nutritivo y delicioso. La combinación saludable que te llenará de energía.',
-    image: '/assets/aguas/alafalfa-[ina-limon.jpeg',
+    image: '/assets/aguas/agua de pina,menta y alfalfa uhd.png',
     price: 'Desde $22',
     badge: 'Saludable',
     BadgeIcon: Leaf,
@@ -678,7 +689,7 @@ const menuItems = [
     category: 'aguas',
     name: 'Agua de Fresas con Menta',
     description: 'Fresas naturales con menta fresca. Refrescante y muy aromático.',
-    image: '/assets/aguas/agua fresas con menta.jpeg',
+    image: '/assets/aguas/fresas con menta agua.png',
     price: 'Desde $22',
     badge: 'Refrescante',
     BadgeIcon: Droplets,
@@ -1013,9 +1024,9 @@ export default function MenuPage() {
   const [search, setSearch] = useState('')
   const [selectedItem, setSelectedItem] = useState(null)
   const tabsRef = useRef(null)
-  const handleOpen  = useCallback((item) => setSelectedItem(item), [])
+  const handleOpen = useCallback((item) => setSelectedItem(item), [])
   const handleClose = useCallback(() => setSelectedItem(null), [])
-  const scrollTabs  = useCallback((dir) => {
+  const scrollTabs = useCallback((dir) => {
     if (tabsRef.current) tabsRef.current.scrollBy({ left: dir * 180, behavior: 'smooth' })
   }, [])
 
@@ -1067,9 +1078,9 @@ export default function MenuPage() {
         }} />
 
         {/* Content */}
-        <div style={{ 
-          position: 'relative', 
-          zIndex: 2, 
+        <div style={{
+          position: 'relative',
+          zIndex: 2,
           maxWidth: '700px',
           textAlign: 'center',
           width: '100%',
