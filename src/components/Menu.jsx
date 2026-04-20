@@ -16,7 +16,7 @@ const menuItems = [
     id: 'flautas',
     name: 'Mamichulas (flautas en vaso)',
     description: 'Doradas y crujientes, rellenas de pollo o papa. Servidas con crema, lechuga y salsa.',
-    image: '/assets/mamichulas vaso.jpeg',
+    image: '/assets/mamichulasJumbo.png',
     price: 'Desde $80',
     badge: 'Favoritas',
     BadgeIcon: Star,
@@ -26,7 +26,7 @@ const menuItems = [
     id: 'quesadillas',
     name: 'Quesadillas',
     description: 'Con queso Oaxaca derretido. De huitlacoche, flor de calabaza, champiñones y más.',
-    image: '/assets/quesadilla.jpeg',
+    image: '/assets/quesadilla frita uhd.png',
     price: 'Desde $40',
     badge: 'Clásicas',
     BadgeIcon: Award,
@@ -59,7 +59,7 @@ export default function Menu() {
     <section id="menu" className="py-20 md:py-32 relative overflow-hidden" ref={sectionRef}>
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-cream via-white to-cream" />
-      
+
       {/* Decorative */}
       <img
         src="/assets/ornament-floral.png"
@@ -98,7 +98,7 @@ export default function Menu() {
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                   />
                   <div className={`absolute top-4 left-4 px-3 py-1 bg-gradient-to-r ${item.color} rounded-full text-white text-xs font-bold shadow-lg`}>
-                  {(() => { const Bi = item.BadgeIcon; return Bi ? <Bi size={11} style={{display:'inline',verticalAlign:'middle',marginRight:'4px'}} /> : null })()} {item.badge}
+                    {(() => { const Bi = item.BadgeIcon; return Bi ? <Bi size={11} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '4px' }} /> : null })()} {item.badge}
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
                 </div>
@@ -113,9 +113,14 @@ export default function Menu() {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-bold gradient-text">{item.price}</span>
-                    <button className={`px-5 py-2 bg-gradient-to-r ${item.color} rounded-full text-white text-sm font-semibold hover:scale-105 shadow-md transition-all duration-300`}>
+                    <a
+                      href={`https://wa.me/523314436726?text=${encodeURIComponent(`¡Hola Tía Petunia! 🌮 Me gustaría ordenar: ${item.name} (${item.price})`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`px-5 py-2 bg-gradient-to-r ${item.color} rounded-full text-white text-sm font-semibold hover:scale-105 shadow-md transition-all duration-300 no-underline`}
+                    >
                       Ordenar
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

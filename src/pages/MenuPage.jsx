@@ -864,21 +864,23 @@ function ItemModal({ item, onClose }) {
 
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '8px' }}>
             <a
-              href="/#contacto"
+              href={`https://wa.me/523314436726?text=${encodeURIComponent(`¡Hola Tía Petunia! 🌮 Me gustaría ordenar: ${item.name} (${item.price})`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 flex: 1, minWidth: '140px',
                 display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
-                background: 'linear-gradient(135deg, #E91E8C, #F5A623)',
+                background: 'linear-gradient(135deg, #25D366, #128C7E)',
                 color: '#fff', fontFamily: 'var(--font-body)', fontWeight: 700,
                 fontSize: '0.95rem', padding: '13px 24px', borderRadius: '100px',
                 textDecoration: 'none',
-                boxShadow: '0 8px 20px rgba(233,30,140,0.28)',
+                boxShadow: '0 8px 20px rgba(37,211,102,0.28)',
                 transition: 'transform 0.2s',
               }}
               onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.04)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
             >
-              Quiero ordenar
+              Ordenar por WhatsApp
             </a>
             <button
               onClick={onClose}
@@ -1022,7 +1024,9 @@ function MenuCard({ item, index, onOpen }) {
               {item.price}
             </span>
             <a
-              href="/#contacto"
+              href={`https://wa.me/523314436726?text=${encodeURIComponent(`¡Hola Tía Petunia! 🌮 Me gustaría ordenar: ${item.name} (${item.price})`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={e => e.stopPropagation()}
               style={{
                 background: item.badgeColor, color: '#fff',
@@ -1358,20 +1362,22 @@ export default function MenuPage() {
           ¡Ordena ahora y recibe lo mejor de Tía Petunia!
         </h3>
         <a
-          href="/#contacto"
+          href={`https://wa.me/523314436726?text=${encodeURIComponent('¡Hola Tía Petunia! 🌮 Me gustaría hacer un pedido')}`}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
-            background: 'linear-gradient(135deg, #E91E8C, #F5A623)',
+            background: 'linear-gradient(135deg, #25D366, #128C7E)',
             color: '#fff', fontFamily: 'var(--font-body)', fontWeight: 700,
             fontSize: '0.95rem', padding: '14px 36px', borderRadius: '100px',
             textDecoration: 'none',
-            boxShadow: '0 8px 24px rgba(233,30,140,0.35)',
+            boxShadow: '0 8px 24px rgba(37,211,102,0.35)',
             transition: 'transform 0.25s',
           }}
           onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px) scale(1.04)'}
           onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0) scale(1)'}
         >
-          Pedir Ahora
+          Pedir por WhatsApp
         </a>
       </div>
 
