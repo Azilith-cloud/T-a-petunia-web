@@ -46,16 +46,16 @@ export default function Especialidad() {
             <div className="relative max-w-lg mx-auto">
               {/* Glow behind image */}
               <div className="absolute inset-0 bg-gradient-to-r from-pink/30 to-orange/30 rounded-3xl blur-3xl" />
-              
+
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="/assets/gordita chilaquiles.jpeg"
+                  src="/assets/tia carlota de petunia.png"
                   alt="Tía Carlota"
                   className="w-full h-80 md:h-[28rem] object-cover"
                 />
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-teal-dark/40 to-transparent" />
-                
+
                 {/* Badge */}
                 <div className="absolute top-4 right-4 bg-gradient-to-r from-orange to-pink px-4 py-2 rounded-full shadow-lg">
                   <span className="text-white font-bold text-sm flex items-center gap-1.5">
@@ -76,9 +76,9 @@ export default function Especialidad() {
           {/* Text side */}
           <div className="flex-1 text-center lg:text-left">
             <div className="reveal">
-                <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-orange-light rounded-full text-sm font-semibold mb-4 backdrop-blur-sm">
-                  <Sparkles size={14} /> Nuestra Especialidad
-                </span>
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-orange-light rounded-full text-sm font-semibold mb-4 backdrop-blur-sm">
+                <Sparkles size={14} /> Nuestra Especialidad
+              </span>
             </div>
 
             <h2
@@ -90,17 +90,17 @@ export default function Especialidad() {
             </h2>
 
             <p className="reveal text-lg text-white/70 mb-8 leading-relaxed max-w-xl" style={{ transitionDelay: '0.2s' }}>
-              La combinación perfecta: masa de maíz recién hecha, rellena de chilaquiles bañados en salsa roja casera, 
+              La combinación perfecta: masa de maíz recién hecha, rellena de chilaquiles bañados en salsa roja casera,
               coronada con crema, queso fresco y cilantro. Un platillo que solo encontrarás aquí.
             </p>
 
             {/* Features */}
             <div className="reveal grid grid-cols-2 gap-4 mb-8" style={{ transitionDelay: '0.3s' }}>
               {[
-                { Icon: Wheat,    label: 'Masa artesanal' },
-                { Icon: Flame,    label: 'Salsa casera' },
-                { Icon: Salad,    label: 'Queso fresco' },
-                { Icon: ChefHat,  label: 'Receta familiar' },
+                { Icon: Wheat, label: 'Masa artesanal' },
+                { Icon: Flame, label: 'Salsa casera' },
+                { Icon: Salad, label: 'Queso fresco' },
+                { Icon: ChefHat, label: 'Receta familiar' },
               ].map((feat) => (
                 <div
                   key={feat.label}
