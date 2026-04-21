@@ -157,7 +157,7 @@ export default function Navbar() {
             )
           })}
           <a
-            href="/#eventos"
+            href="/#contacto"
             style={{
               marginLeft: '12px',
               padding: '10px 24px',
@@ -306,7 +306,7 @@ export default function Navbar() {
             )
           })}
           <a
-            href="/#eventos"
+            href="/#contacto"
             onClick={() => setMenuOpen(false)}
             style={{
               marginTop: '8px',
