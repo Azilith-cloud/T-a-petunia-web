@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import FlautaAnimation from './components/FlautaAnimation'
@@ -29,11 +30,35 @@ function HomePage() {
   )
 }
 
+function ScrollToHash() {
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    if (hash) {
+      // Retry scrolling until the element is found (page may still be rendering)
+      let attempts = 0
+      const tryScroll = () => {
+        const el = document.querySelector(hash)
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+        } else if (attempts < 10) {
+          attempts++
+          setTimeout(tryScroll, 200)
+        }
+      }
+      setTimeout(tryScroll, 150)
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }, [pathname, hash])
+  return null
+}
+
 export default function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen">
         <Navbar />
+        <ScrollToHash />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/menu" element={<MenuPage />} />

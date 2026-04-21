@@ -222,7 +222,13 @@ const menuItems = [
     id: 'mamichulas-petite',
     category: 'flautas',
     name: 'Mamichulas Petite — 5 pzas',
-    description: `flautas bien crocantes, rellenas de: pierna, pollo, frijol y papa… pa' que no haya pierde.\n\nBañadas en tu salsa favorita: verde o chipotle (tranquila, ninguna pica 😉).\n\nDoraditas, llenitas y listas para hacerte feliz… esto ya no es antojo, es compromiso. 😏🔥. Nota: aumenta $10 si son de un solo sabor.`,
+    description: `Flautas bien crocantes, rellenas de: pierna, pollo, frijol y papa… pa' que no haya pierde.
+
+Bañadas en tu salsa favorita: verde o chipotle (tranquila, ninguna pica 😉).
+
+Doraditas, llenitas y listas para hacerte feliz… esto ya no es antojo, es compromiso. 😏🔥.
+
+Nota: aumenta $10 si son de un solo sabor.`,
     image: '/assets/mamichulasJumbo.png',
     price: '$80',
     badge: 'Petite',
@@ -858,6 +864,7 @@ function ItemModal({ item, onClose }) {
           <p style={{
             fontFamily: 'var(--font-body)',
             fontSize: '1rem', color: '#555', lineHeight: 1.7, margin: 0,
+            whiteSpace: 'pre-line',
           }}>
             {item.description}
           </p>
@@ -1012,6 +1019,9 @@ function MenuCard({ item, index, onOpen }) {
           <p style={{
             fontFamily: 'var(--font-body)', fontSize: '0.85rem',
             color: '#666', margin: '0 0 18px', lineHeight: 1.6, flex: 1,
+            whiteSpace: 'pre-line',
+            display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
           }}>
             {item.description}
           </p>

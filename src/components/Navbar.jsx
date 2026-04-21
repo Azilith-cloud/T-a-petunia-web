@@ -1,13 +1,30 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Tag } from 'lucide-react'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
   const isPromoPage = location.pathname === '/promociones'
   const isMenuPage = location.pathname === '/menu'
+
+  const handleHashLink = (e, href) => {
+    e.preventDefault()
+    setMenuOpen(false)
+    // Parse the href: e.g. '/#eventos' -> pathname='/', hash='#eventos'
+    const [path, hash] = href.split('#')
+    const targetPath = path || '/'
+    if (location.pathname === targetPath) {
+      // Already on the right page, just scroll
+      const el = document.getElementById(hash)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      // Navigate to the page with hash
+      navigate({ pathname: targetPath, hash: '#' + hash })
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -139,6 +156,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
+                onClick={(e) => handleHashLink(e, link.href)}
                 style={{
                   padding: '8px 16px',
                   borderRadius: '100px',
@@ -148,6 +166,7 @@ export default function Navbar() {
                   fontSize: '0.875rem',
                   textDecoration: 'none',
                   transition: 'all 0.3s',
+                  cursor: 'pointer',
                 }}
                 onMouseEnter={e => { e.currentTarget.style.background = 'rgba(233,30,140,0.1)'; e.currentTarget.style.color = '#E91E8C' }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = linkColor }}
@@ -158,6 +177,7 @@ export default function Navbar() {
           })}
           <a
             href="/#contacto"
+            onClick={(e) => handleHashLink(e, '/#contacto')}
             style={{
               marginLeft: '12px',
               padding: '10px 24px',
@@ -168,6 +188,7 @@ export default function Navbar() {
               fontWeight: 600,
               fontSize: '0.875rem',
               textDecoration: 'none',
+              cursor: 'pointer',
               boxShadow: '0 4px 16px rgba(13,110,126,0.3)',
               transition: 'all 0.3s',
             }}
@@ -290,7 +311,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => handleHashLink(e, link.href)}
                 style={{
                   padding: '12px 16px',
                   borderRadius: '12px',
@@ -299,6 +320,7 @@ export default function Navbar() {
                   fontWeight: 500,
                   fontSize: '0.95rem',
                   textDecoration: 'none',
+                  cursor: 'pointer',
                 }}
               >
                 {link.label}
@@ -307,7 +329,7 @@ export default function Navbar() {
           })}
           <a
             href="/#contacto"
-            onClick={() => setMenuOpen(false)}
+            onClick={(e) => handleHashLink(e, '/#contacto')}
             style={{
               marginTop: '8px',
               padding: '13px 16px',
@@ -319,6 +341,7 @@ export default function Navbar() {
               fontSize: '0.95rem',
               textDecoration: 'none',
               textAlign: 'center',
+              cursor: 'pointer',
             }}
           >
             ¡Pedir Ahora!
