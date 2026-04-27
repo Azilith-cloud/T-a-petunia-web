@@ -135,6 +135,9 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   to={link.href}
+                  onClick={() => {
+                    if (link.href === '/') window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
                   style={{
                     padding: '8px 16px',
                     borderRadius: '100px',
@@ -291,7 +294,10 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   to={link.href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => {
+                    setMenuOpen(false)
+                    if (link.href === '/') window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
                   style={{
                     padding: '12px 16px',
                     borderRadius: '12px',
