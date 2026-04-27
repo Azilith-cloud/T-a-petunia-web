@@ -13,7 +13,7 @@ export const slides = [
   },
   {
     id: 'dia-del-nino',
-    src: '/assets/promociones/Dia  del nino.jpeg',
+    src: '/assets/promociones/dia del nino.png',
     alt: 'Día del Niño',
     title: '¡Festeja el Día del Niño!',
     subtitle: 'Sorprende a los peques con nuestros platillos favoritos.',

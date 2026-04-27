@@ -42,9 +42,25 @@ export default function Hero() {
             el alma
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-xl text-white/90 max-w-2xl leading-relaxed mt-4 md:mt-6 font-medium tracking-wide">
-            Tías (gorditas) • Mamichulas (flautas) • Kekabronas (quesadillas) • Pozole • Cabroncito • Tomasitos • MamiBirrias • Tacos de barbacoa bañados • Aguas frescas • Nachiquiles
-          </p>
+          <ul className="text-lg sm:text-xl md:text-xl text-white/90 max-w-2xl mt-4 md:mt-6 font-medium tracking-wide list-none p-0 m-0 space-y-1">
+            {[
+              'Tías (gorditas)',
+              'Mamichulas (flautas)',
+              'Kekabronas (quesadillas)',
+              'Pozole',
+              'Cabroncito',
+              'Tomasitos',
+              'MamiBirrias',
+              'Tacos de barbacoa bañados',
+              'Nachiquiles',
+              'Aguas frescas',
+            ].map((item) => (
+              <li key={item} className="flex items-center gap-2">
+                <span className="text-[#F5A623] text-sm">▸</span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Mascot (Always Absolutely Positioned relative to the 1280px Container, so it never floats away on ultrawide nor shifts vertically into the text) */}

@@ -14,7 +14,7 @@ const cards = [
   {
     id: 'promo-dia-nino',
     label: '¡Festeja el Día del Niño!',
-    image: '/assets/promociones/Dia  del nino.jpeg',
+    image: '/assets/promociones/dia del nino.png',
     path: '/promociones',
     isPromo: true,
     tag: 'Edición Especial',
@@ -85,13 +85,13 @@ export default function QuickSelection() {
   }, [isHovered])
 
   return (
-    <section 
-      style={{ backgroundColor: '#094E5A' }} 
+    <section
+      style={{ backgroundColor: '#094E5A' }}
       className="py-16 md:py-24 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="flex justify-between items-center mb-10">
-          <h2 
+          <h2
             className="text-white text-3xl md:text-4xl font-bold"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
@@ -99,7 +99,7 @@ export default function QuickSelection() {
           </h2>
         </div>
 
-        <div 
+        <div
           ref={scrollRef}
           onMouseEnter={() => setIsHovered(true)}
           onMouseDown={handleMouseDown}
@@ -109,8 +109,8 @@ export default function QuickSelection() {
           onTouchStart={() => setIsHovered(true)}
           onTouchEnd={() => setIsHovered(false)}
           className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 no-scrollbar -mx-6 md:-mx-12"
-          style={{ 
-            scrollbarWidth: 'none', 
+          style={{
+            scrollbarWidth: 'none',
             msOverflowStyle: 'none',
             WebkitOverflowScrolling: 'touch',
             paddingLeft: 'max(24px, calc(50% - 640px))',
@@ -118,11 +118,11 @@ export default function QuickSelection() {
           }}
         >
           {cards.map((card, i) => (
-            <div 
-              key={card.id} 
+            <div
+              key={card.id}
               onClick={(e) => handleCardClick(e, card.path)}
               className="relative rounded-3xl overflow-hidden group cursor-pointer shadow-2xl transition-transform duration-500 hover:-translate-y-2 shrink-0 snap-center"
-              style={{ 
+              style={{
                 animation: `slideUp 0.6s ease-out ${i * 0.15}s both`,
                 width: 'min(85vw, 300px)',
                 aspectRatio: '4/3',
@@ -132,14 +132,14 @@ export default function QuickSelection() {
                   : '0 24px 48px -12px rgba(0,0,0,0.4)',
               }}
             >
-              <img 
-                src={card.image} 
-                alt={card.label} 
+              <img
+                src={card.image}
+                alt={card.label}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
-              
+
               {/* Badge de promoción */}
               {card.isPromo && (
                 <span style={{
@@ -162,18 +162,18 @@ export default function QuickSelection() {
                 </span>
               )}
 
-              <h3 
+              <h3
                 className="absolute bottom-6 left-0 right-0 text-center text-white font-bold text-2xl tracking-wide drop-shadow-xl px-3"
-                style={{ fontFamily: 'var(--font-heading)', fontSize: card.isPromo ? '1.1rem' : undefined }}
+                style={{ fontFamily: 'var(--font-heading)' }}
               >
                 {card.label}
               </h3>
             </div>
           ))}
         </div>
-        
+
         {/* Helper text for mobile */}
-        <div 
+        <div
           className="text-center mt-2 text-white/50 text-sm font-medium flex justify-center items-center gap-2 lg:hidden"
           style={{ fontFamily: 'var(--font-body)' }}
         >
