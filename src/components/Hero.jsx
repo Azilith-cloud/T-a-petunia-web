@@ -20,7 +20,7 @@ export default function Hero() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 flex flex-col justify-center pt-28 sm:pt-32 pb-[260px] sm:pb-[320px] md:pb-24 min-h-[100dvh] md:min-h-[85vh]">
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 flex flex-col justify-start pt-24 md:justify-center md:pt-32 pb-0 md:pb-24 min-h-[100dvh] md:min-h-[85vh]">
 
         {/* Left text content */}
         <div className="w-full md:w-[60%] lg:w-[50%] text-left animate-slide-up relative z-20">
@@ -63,7 +63,7 @@ export default function Hero() {
           </ul>
         </div>
 
-        {/* Mascot — Absolutely positioned, bottom-right on all sizes */}
+        {/* Mascot — Absolutely positioned bottom-right */}
         <div
           className="absolute bottom-0 right-0 md:right-[-40px] lg:right-[-60px] xl:right-[-80px] z-10 animate-slide-up pointer-events-none flex justify-end"
           style={{ animationDelay: '0.2s', width: 'auto' }}
@@ -76,7 +76,7 @@ export default function Hero() {
             <img
               src="/assets/cerdita sin fondo hd.png?v=9"
               alt="Cerdita Tía Petunia"
-              className="w-[55vw] sm:w-[50vw] md:w-[600px] lg:w-[750px] xl:w-[850px] h-auto drop-shadow-[0_45px_65px_rgba(0,0,0,0.8)] hover:scale-105 transition-transform duration-700 pointer-events-auto"
+              className="w-[85vw] sm:w-[75vw] md:w-[600px] lg:w-[750px] xl:w-[850px] h-auto drop-shadow-[0_45px_65px_rgba(0,0,0,0.8)] hover:scale-105 transition-transform duration-700 pointer-events-auto"
               style={{
                 transformOrigin: 'bottom center',
                 display: 'block'
