@@ -7,6 +7,7 @@ import Promociones from './components/Promociones'
 import Menu from './components/Menu'
 import Especialidad from './components/Especialidad'
 import About from './components/About'
+import CEO from './components/CEO'
 import EventForm from './components/EventForm'
 import Footer from './components/Footer'
 import PromocionesPage from './pages/PromocionesPage'
@@ -24,6 +25,7 @@ function HomePage() {
       <Menu />
       <Especialidad />
       <About />
+      <CEO />
       <EventForm />
       <Footer />
     </>
