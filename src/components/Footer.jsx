@@ -94,19 +94,23 @@ export default function Footer() {
             <p className="text-white/60 text-sm leading-relaxed flex items-start gap-2 justify-center md:justify-end text-left sm:text-center md:text-right">
               <MapPin size={16} className="mt-0.5 shrink-0" />
               <span>
-                Ubicado en: <strong className="text-white/90">Plaza Velas María</strong><br />
-                H. Colegio Militar #4-A<br />
-                El Fortín, 45066<br />
+                Ubicado en: <strong className="text-white/90">Enrique Ladrón de Guevara 2898 local 9</strong><br />
+                Paseos del Sol, 45079<br />
                 Zapopan, Jal.
               </span>
             </p>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-gradient-to-r from-pink to-orange rounded-full text-white text-sm font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-            >
-              <MapPin size={14} />
-              Ver en Google Maps
-            </a>
+            <div className="mt-6 rounded-2xl overflow-hidden border border-white/10 shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14935.014168136237!2d-103.4300605291883!3d20.63890025826956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ac15a78a7021%3A0x31139a58a40f649!2sAv.%20Enrique%20Ladr%C3%B3n%20de%20Guevara%202898-INTERIOR%209%2C%20Paseos%20del%20Sol%2C%2045079%20Zapopan%2C%20Jal.%2C%20M%C3%A9xico!5e0!3m2!1ses!2sus!4v1779477304034!5m2!1ses!2sus"
+                width="100%"
+                height="200"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación Tía Petunia"
+              />
+            </div>
           </div>
         </div>
 
