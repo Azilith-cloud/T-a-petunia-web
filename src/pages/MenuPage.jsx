@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import {
@@ -1082,7 +1083,11 @@ export default function MenuPage() {
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--color-cream)' }}>
-
+      <Helmet>
+        <title>Menú | Tía Petunia — Gorditas, Flautas, Quesadillas y más en Zapopan</title>
+        <meta name="description" content="Explora el menú completo de Tía Petunia: gorditas, flautas, mamichulas, quesadillas, birrias, nachiquiles, aguas frescas y más. Comida casera mexicana en Zapopan, Jalisco." />
+        <link rel="canonical" href="https://tiapetunia.com.mx/menu" />
+      </Helmet>
       {/* ── Hero banner ── */}
       <div style={{
         position: 'relative',

@@ -47,8 +47,10 @@ export default function Navbar() {
   const linkColor = isDark ? '#094E5A' : 'white'
 
   return (
+    <header role="banner">
     <nav
       id="navbar"
+      aria-label="Navegación principal"
       style={{
         position: 'fixed',
         top: 0,
@@ -365,5 +367,6 @@ export default function Navbar() {
         }
       `}</style>
     </nav>
+    </header>
   )
 }

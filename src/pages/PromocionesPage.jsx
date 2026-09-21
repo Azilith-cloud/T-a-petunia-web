@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { slides } from '../data/promociones'
@@ -172,6 +173,11 @@ export default function PromocionesPage() {
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--color-cream)' }}>
+      <Helmet>
+        <title>Promociones | Tía Petunia — Ofertas y Combos Especiales en Zapopan</title>
+        <meta name="description" content="Descubre las promociones y combos especiales de Tía Petunia. Aprovecha las mejores ofertas en gorditas, flautas y quesadillas caseras en Zapopan, Jalisco." />
+        <link rel="canonical" href="https://tiapetunia.com.mx/promociones" />
+      </Helmet>
       {/* Hero Banner */}
       <div style={{
         position: 'relative',

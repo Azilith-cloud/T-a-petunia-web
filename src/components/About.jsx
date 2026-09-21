@@ -38,7 +38,7 @@ export default function About() {
               <div className="relative w-72 h-72 md:w-96 md:h-96">
                 <img
                   src="/assets/abuela-body.jpg"
-                  alt="Tía Petunia - La abuela cocinera"
+                  alt="Tía Petunia — La abuela cocinera, símbolo de la tradición de comida casera mexicana"
                   className="w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -65,7 +65,7 @@ export default function About() {
               className="reveal text-4xl md:text-5xl font-bold gradient-text mb-6"
               style={{ fontFamily: 'var(--font-heading)', transitionDelay: '0.1s' }}
             >
-              Conoce a Tía Petunia
+              Conoce a Tía Petunia — Comida Casera en Zapopan
             </h2>
 
             <div className="space-y-4">

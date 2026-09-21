@@ -36,11 +36,13 @@ export default function Hero() {
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold mb-4 md:mb-6 leading-[1.1] text-white"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
+            <span className="sr-only">Tía Petunia — </span>
             Sabor que{' '}
             <br className="hidden lg:block" />
             <span style={{ color: '#FF6EB4' }}>abraza</span>{' '}
             el alma
           </h1>
+          <p className="sr-only">Gorditas, flautas, quesadillas y más comida casera mexicana en Zapopan, Jalisco. Más de 11 años de tradición.</p>
 
           <ul className="text-sm sm:text-lg md:text-xl text-white/90 max-w-2xl mt-4 md:mt-6 font-medium tracking-wide list-none p-0 m-0 space-y-0.5 sm:space-y-1">
             {[
@@ -75,7 +77,7 @@ export default function Hero() {
 
             <img
               src="/assets/cerdita sin fondo hd.png?v=9"
-              alt="Cerdita Tía Petunia"
+              alt="Mascota de Tía Petunia — Restaurante de gorditas, flautas y quesadillas en Zapopan, Jalisco"
               className="w-[85vw] sm:w-[75vw] md:w-[600px] lg:w-[750px] xl:w-[850px] h-auto drop-shadow-[0_45px_65px_rgba(0,0,0,0.8)] hover:scale-105 transition-transform duration-700 pointer-events-auto"
               style={{
                 transformOrigin: 'bottom center',

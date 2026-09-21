@@ -14,19 +14,27 @@ import PromocionesPage from './pages/PromocionesPage'
 import MenuPage from './pages/MenuPage'
 import QuickSelection from './components/QuickSelection'
 import WhatsAppButton from './components/WhatsAppButton'
+import { Helmet } from 'react-helmet-async'
 
 function HomePage() {
   return (
     <>
-      <Hero />
-      <QuickSelection />
-      <FlautaAnimation />
-      <Promociones />
-      <Menu />
-      <Especialidad />
-      <About />
-      <CEO />
-      <EventForm />
+      <Helmet>
+        <title>Tía Petunia | Gorditas, Flautas y Quesadillas en Zapopan, Jalisco</title>
+        <meta name="description" content="Tía Petunia — Gorditas, flautas, quesadillas y la famosa gordita de chilaquiles en Zapopan, Jalisco. Más de 11 años de sabor casero. Pide a domicilio o visítanos." />
+        <link rel="canonical" href="https://tiapetunia.com.mx/" />
+      </Helmet>
+      <main>
+        <Hero />
+        <QuickSelection />
+        <FlautaAnimation />
+        <Promociones />
+        <Menu />
+        <Especialidad />
+        <About />
+        <CEO />
+        <EventForm />
+      </main>
       <Footer />
     </>
   )
